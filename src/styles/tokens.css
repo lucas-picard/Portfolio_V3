@@ -1,0 +1,9 @@
+:root {
+  --bg: #0a0b0c;
+  --panel: #121415;
+  --text: #cfd0cc;
+  --accent: #7cc84a;
+  --amber: #f2bd4c;
+  --font-pixel: 'VT323', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+}
