@@ -1,9 +1,65 @@
+/* Fichier des variables CSS partagees : couleurs, typographie et espacements, ...
+ * 
+ * ========================================================================
+ */
+
 :root {
+  
+  /* Surfaces */
   --bg: #0a0b0c;
-  --panel: #121415;
+  --panel-raised: #181a1c;
+  --panel-sunken: #0d0e0f;
+  --border: #2a2e31;
+  --border-strong: #3a3f42;
+
+  /* Texte */
   --text: #cfd0cc;
+  --text-dim: #8f948f;
+  --text-faint: #6b706c;
+
+  /* Accents */
   --accent: #7cc84a;
-  --amber: #f2bd4c;
-  --font-pixel: 'VT323', monospace;
-  --font-mono: 'JetBrains Mono', monospace;
+  --accent-bright: #9be36a;
+  --accent-dim: #3f6b2a;
+  --accent-10: rgb(124 200 74 / 10%);
+  --accent-25: rgb(124 200 74 / 25%);
+  --amber-ui: #f2bd4c;
+  --orange: #e0861a;
+  --blue: #5aaef0;
+  --purple: #a46ee0;
+  --todo: #f2bd4c;
+
+  /* Typo */
+   --font-pixel: 'VT323', 'Courier New', monospace;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --fs-hero: clamp(3rem, 2rem + 4.2vw, 6rem);
+  --fs-title: clamp(2.6rem, 1.8rem + 2.6vw, 4.4rem);
+  --fs-subtitle: clamp(1.25rem, 1.05rem + 0.6vw, 1.7rem);
+  --fs-h3: clamp(1.3rem, 1.1rem + 0.5vw, 1.6rem);
+  --fs-body: clamp(0.84rem, 0.8rem + 0.15vw, 0.95rem);
+  --fs-small: 0.78rem;
+  --lh-body: 1.75;
+  --tracking-mono: 0.02em;
+  --tracking-pixel: 0.04em;
+
+  /* Espacements */
+   --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Effets */
+  --shadow-deep: 0 18px 40px -12px rgb(0 0 0 / 85%), 0 4px 10px rgb(0 0 0 / 60%);
+  --glow-accent: 0 0 12px rgb(124 200 74 / 45%);
+
+  /* Layout */
+  --nav-tile-w: 104px;
+  --tabbar-h: 68px;
+  --z-shell: 10;
+  --z-overlay: 50;
+  --z-boot: 100;
 }

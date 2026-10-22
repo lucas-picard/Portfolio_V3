@@ -1,3 +1,7 @@
+// Fichier de contenu de la page Competences : categories et niveaux
+// 
+// ========================================================================
+
 const skills = {
     title: 'COMPÉTENCES',
     tagline: 'Du développement logiciel au matériel, en passant par les outils et les systèmes informatiques.',

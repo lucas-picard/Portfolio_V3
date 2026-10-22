@@ -1,3 +1,7 @@
+// Fichier de contenu de la page Contact : coordonnees et formulaire
+// 
+// ========================================================================
+
 import links from './lien.js';
 
 const contact = {

@@ -1,3 +1,7 @@
+// Fichier de contenu de la page A propos : presentation et parcours personnel
+// 
+// ========================================================================
+
 const About = {
   title: 'ABOUT ME',
   tagline: 'JE SUIS LUCAS PICARD',

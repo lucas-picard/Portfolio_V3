@@ -1,3 +1,7 @@
+// Fichier contenant les liens utilises dans les pages du portfolio
+// 
+// ========================================================================
+
 const links = {
     email: 'lucaspicard.pro5@gmail.com',
     github: 'https://github.com/lucas-picard',

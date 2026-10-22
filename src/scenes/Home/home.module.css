@@ -1,0 +1,12 @@
+/* Fichier du style de la page Home
+ * 
+ * ========================================================================
+ */
+
+ 
+.hero{
+    color: var(--accent);
+    font-family: var(--font-pixel);
+    font-size: 5rem;
+    text-align: center;
+}

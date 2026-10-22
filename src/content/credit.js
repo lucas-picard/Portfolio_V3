@@ -1,3 +1,7 @@
+// Fichier de contenu de la page Credits : presentation et inspirations
+// 
+// ========================================================================
+
 import links from './lien.js';
 
 const credit = {

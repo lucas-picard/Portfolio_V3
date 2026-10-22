@@ -1,3 +1,7 @@
+// Fichier de contenu de la page Parcours : formations et experiences
+// 
+// ========================================================================
+
 const journey = {
   title: 'PARCOURS',
   tagline: 'Formations & expériences',

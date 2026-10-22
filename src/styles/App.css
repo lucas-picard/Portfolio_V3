@@ -1,9 +1,0 @@
-.app {
-  min-height: 100vh;
-}
-
-h1 {
-  color: var(--accent);
-  font-size: 2rem;
-  text-align: center;
-}

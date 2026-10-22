@@ -1,3 +1,7 @@
+// Fichier de configuration de Vite
+// 
+// ========================================================================
+
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 

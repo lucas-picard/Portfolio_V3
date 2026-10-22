@@ -1,3 +1,7 @@
+// Fichier de contenu de la page Home : titre, accroche et presentation
+// 
+// ========================================================================
+
 const home = {
     title: 'Home',
     tagline: 'Bienvenue sur mon portfolio',

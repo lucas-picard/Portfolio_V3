@@ -1,3 +1,7 @@
+// Fichier de contenu des projets presentes dans la page Projets
+// 
+// ========================================================================
+
 import links from './lien.js';
 
 const projects = {
