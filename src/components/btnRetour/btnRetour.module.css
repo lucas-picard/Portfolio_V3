@@ -1,0 +1,23 @@
+/* Fichier style du bouton de retour à la page d'accueil
+ * 
+ * ========================================================================
+ */
+
+
+.btnRetour {
+
+
+}
+
+.lien{
+    text-decoration: none;
+    background-color: var(--panel-raised);
+    color: var(--accent);
+    
+    padding: var(--space-1);
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+    text-align: center;
+
+    display: inline-block;
+}
