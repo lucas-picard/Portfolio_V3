@@ -3,13 +3,13 @@
 // ========================================================================
 
 import { Link } from "react-router-dom"
-import { Externe } from "../../../config/routes.jsx"
 import style from "./btnRetour.module.css"
 
-export default function BtnRetour() {
+export default function BtnRetour({ Label, To}) {
   return (
     <div className={ style.btnRetour }>
-      <Link className={ style.lien } to={Externe[0].path}>{Externe[0].label}</Link>
+      {/*Lien vers accueil */}
+      <Link className={ style.lien } to={ To }>{Label}</Link>
     </div>
   )
 }

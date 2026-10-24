@@ -3,7 +3,7 @@
 // ========================================================================
 
 const home = {
-    title: 'Home',
+    title: 'LUCAS PICARD',
     tagline: 'Bienvenue sur mon portfolio',
     paragraph:
         "Bienvenue sur mon portfolio, je suis un étudiant en Terminale pro CIEL " +

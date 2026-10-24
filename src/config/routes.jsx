@@ -2,8 +2,8 @@
 // 
 // ========================================================================
 
-import Home from "../scenes/Home/home.jsx"
-import About from "../scenes/About/about.jsx"
+import Home from "../scenes/Home/Home.jsx"
+import About from "../scenes/About/About.jsx"
 import Journey from "../scenes/Journey/Journey.jsx"
 import Contact from "../scenes/Contact/Contact.jsx"
 import NotFound from "../scenes/NotFound/NotFound.jsx"
