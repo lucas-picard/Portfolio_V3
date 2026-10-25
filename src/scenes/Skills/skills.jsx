@@ -2,7 +2,6 @@
 // 
 // ========================================================================
 
-import style from "./Skills.module.css"
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import { Externe } from "../../config/routes.jsx"
 

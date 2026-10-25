@@ -82,10 +82,15 @@ button {
 }
 
 img,
-svg,
-canvas {
+svg {
   display: block;
   max-width: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 ::selection {
@@ -131,6 +136,14 @@ canvas {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+#root {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -5,14 +5,16 @@
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+
+import App3D from './App3D.jsx'
 
 import './styles/tokens.css'
 import './styles/global.css'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <App3D />
   </StrictMode>,
 )
 

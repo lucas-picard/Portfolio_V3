@@ -4,7 +4,7 @@
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import { Menu, Externe } from "./config/routes.jsx"
-import style from "./App.module.css"
+import style from "./styles/App.module.css"
 
 export default function App() {
   return (
