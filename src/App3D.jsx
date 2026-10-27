@@ -8,14 +8,11 @@ import { Perf } from "r3f-perf"
 import { OrbitControls } from '@react-three/drei'
 import { Leva } from "leva"
 
-// Import hooks de debugage
+// Import hooks de debugagej
 import useViewPerf from './three/debug/useViewPerf'
 
 // Import objet
-import Panneau from './three/Objects/Loader/panneau'
-import Encadre from './three/Objects/Loader/Encadre'
-import Ground from './three/Objects/Mesh/Gound'
-import Wall from './three/Objects/Loader/wall'
+import Experience from './three/scenes/experience'
 
 
 export default function App3D() {
@@ -30,10 +27,7 @@ export default function App3D() {
         <OrbitControls makeDefault />
 
         <ambientLight intensity={1} />
-        <Encadre />
-        <Wall />
-        <Ground />
-        <Panneau />
+        <Experience />
       </Canvas>
     </>
   )

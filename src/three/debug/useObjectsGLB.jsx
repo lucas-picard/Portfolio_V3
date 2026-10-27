@@ -1,3 +1,7 @@
+// Fichier pour le pannel de debug des objets IMPORTER
+// 
+// ========================================================================
+
 import { useControls, folder } from "leva"
 
 export default function useObjects() {
@@ -9,7 +13,7 @@ export default function useObjects() {
             Panneau: folder({
                 panneauPosition: {
                     label: "position",
-                    value: { x: 0, y: -2.8, z: 0 },
+                    value: { x: 0, y: -2.8, z: 0.2 },
                     step: 0.01,
                 },
                 panneauScale: {
@@ -48,6 +52,24 @@ export default function useObjects() {
                     step: 0.01,
                 },
                 managementScale: {
+                    label: "scale",
+                    value: 2.233,
+                    step: 0.01,
+                },
+            },
+                {
+            collapsed: true,
+                }),
+
+
+// === Arcade === 
+            arcade: folder({
+                arcadePosition: {
+                    label: "position",
+                    value: { x: -16.9, y: -10.2, z: 1.15 },
+                    step: 0.01,
+                },
+                arcadeScale: {
                     label: "scale",
                     value: 2.233,
                     step: 0.01,

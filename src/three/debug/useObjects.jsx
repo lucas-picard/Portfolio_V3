@@ -1,3 +1,7 @@
+// Fichier pour le pannel de debug des objets CREER
+// 
+// ========================================================================
+
 import { useControls, folder } from "leva"
 
 export default function useObjects() {
@@ -19,7 +23,7 @@ export default function useObjects() {
                 },
                 groundColor: {
                     label: "Couleur",
-                    value: '#ff0000'
+                    value: '#313131'
                 },
                 groundVisible: {
                     label: "Wireframe",
