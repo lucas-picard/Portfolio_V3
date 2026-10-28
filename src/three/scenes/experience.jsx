@@ -12,8 +12,7 @@ import Top from '../Objects/Top'
 export default function Experience({ ground })
 {
 
-    const BTN_x = -0.77
-    const BTN_z = 0.02
+   
 
     const latte_x = -13
     const latte_z = -0.4
@@ -188,37 +187,7 @@ export default function Experience({ ground })
 
 
 
-        {/* Boutons */}
-            <Import
-            key="about"
-            path="/models/Fonctionnel/BTNabout.glb"
-            position={{ x: BTN_x, y: -4.11, z: BTN_z }}
-            scale={2.38}
-            />
-            <Import
-            key="projets"
-            path="/models/Fonctionnel/BTNprojets.glb"
-            position={{ x: BTN_x, y: -3.96, z: BTN_z }}
-            scale={2.38}
-            />
-            <Import
-            key="competences"
-            path="/models/Fonctionnel/BTNcompetences.glb"
-            position={{ x: BTN_x, y: -3.82, z: BTN_z }}
-            scale={2.38}
-            />
-            <Import
-            key="parcours"
-            path="/models/Fonctionnel/BTNparcours.glb"
-            position={{ x: BTN_x, y: -3.67, z: BTN_z }}
-            scale={2.38}
-            />
-            <Import
-            key="contact"
-            path="/models/Fonctionnel/BTNcontact.glb"
-            position={{ x: BTN_x, y: -3.52, z: BTN_z }}
-            scale={2.38}
-            />
+        
 
              {/* Encadrement des boutons */}
             <Import
@@ -229,7 +198,7 @@ export default function Experience({ ground })
             />
 
 
-        {/* Sol */}
+        {/* Sol, Plafond */}
             <Ground />
             <Top />
         </>

@@ -5,7 +5,6 @@
 // Import de R3F et React
 import { Canvas } from '@react-three/fiber'
 import { Perf } from "r3f-perf"
-import { OrbitControls } from '@react-three/drei'
 import { Leva } from "leva"
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js'
 
@@ -13,10 +12,14 @@ import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUnifo
 import useViewPerf from './three/debug/useViewPerf'
 import useObjects from './three/debug/useObjects'
 
-import Light from './three/Light/Light'
-
 // Import objet
 import Experience from './three/scenes/experience'
+
+// Import autre
+import Light from './three/Light/Light'
+import RouteBTN from './three/scenes/RouteBTN'
+import Camera from './three/camera/Camera'
+
 
 RectAreaLightUniformsLib.init()
 
@@ -30,10 +33,11 @@ export default function App3D() {
 
       <Canvas shadows>
         { perfVisible ? <Perf position="top-left" /> : null }
-        <OrbitControls makeDefault />
 
+        <Camera />
         <Light />
         <Experience ground={ground} />
+        <RouteBTN />
       </Canvas>
     </>
   )
