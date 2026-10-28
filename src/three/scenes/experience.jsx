@@ -2,40 +2,236 @@
 // 
 // ========================================================================
 
-// Loader
-import Panneau from '../Objects/Loader/panneau'
-import Encadre from '../Objects/Loader/Encadre'
-import Wall from '../Objects/Loader/wall'
-import Arcade from '../Objects/Loader/Arcade'
-
-// BTN
-import BTNabout from '../Objects/Loader/BTN/About'
-import BTNproject from '../Objects/Loader/BTN/Project'
-import BTNskill from '../Objects/Loader/BTN/Skill'
-import BTNjourney from '../Objects/Loader/BTN/Journey'
-import BTNcontact from '../Objects/Loader/BTN/Contact'
-
-// Mesh
-import Ground from '../Objects/Mesh/Gound'
 
 
-export default function Experience()
+import Import from '../Objects/Import'
+import Ground from '../Objects/Gound'
+import Top from '../Objects/Top'
+
+
+export default function Experience({ ground })
 {
+
+    const BTN_x = -0.77
+    const BTN_z = 0.02
+
+    const latte_x = -13
+    const latte_z = -0.4
+
     return(
         <>
-            <Encadre />
-            <Wall />
-            <Panneau />
-            <Arcade />
+        {/* Panneau */}
+            <Import
+            key="panneau"
+            path="/models/Fonctionnel/panneau.glb"
+            position={{ x: 0, y: -2.8, z: 0.2 }}
+            scale={2}
+            receiveShadow
+            />
+
+        {/* Wall */}
+            <Import
+            key="wall"
+            path="/models/Decors/wall.glb"
+            position={{ x: 0, y: -2.5, z: -0.15 }}
+            scale={1}
+            />
 
 
-            <BTNabout />
-            <BTNproject />
-            <BTNskill />
-            <BTNjourney />
-            <BTNcontact />
+        {/* Arcade */}
+            <Import
+            key="arcade"
+            path="/models/Fonctionnel/arcade.glb"
+            position={{ x: -16, y: -10.2, z: 0.9 }}
+            scale={2}
+            />
 
+         {/* Cadre */}
+            <Import
+            key="cadre"
+            path="/models/Decors/cadre.glb"
+            position={{ x: 15, y: 1, z: -0.4 }}
+            scale={0.5}
+            />
+
+        {/* Kakemono */}
+            <Import
+            key="kakemono"
+            path="/models/Decors/kakemono.glb"
+            position={{ x: 12, y: -7, z: -0.3 }}
+            scale={1}
+            />
+        
+        {/* Bar led */}
+            <Import
+            key="barLed"
+            path="/models/Decors/barre_led.glb"
+            position={{ x: 0, y: 3.8, z: 0.6 }}
+            scale={2}
+            />
+
+        {/* Etagere */}
+            <Import
+            key="etagere"
+            path="/models/Decors/etagere_murale.glb"
+            position={{ x: -15, y: 3.8, z: 0.2 }}
+            scale={1}
+            />
+
+         {/* PC */}
+            <Import
+            key="pc"
+            path="/models/Decors/pc_gamer.glb"
+            position={{ x: 10, y: -9.55, z: 0.7 }}
+            scale={1}
+            />
+
+        {/* plantes_murales */}
+            <Import
+            key="plantes_murales"
+            path="/models/Decors/plantes_murales.glb"
+            position={{ x: 15.5, y: -3.5, z: 0.2 }}
+            scale={1}
+            />
+
+        {/* terminal */}
+            <Import
+            key="terminal"
+            path="/models/Decors/terminal.glb"
+            position={{ x: 15.5, y: -10, z: 1 }}
+            scale={2}
+            />
+        
+        {/* chat */}
+            <Import
+            key="chat"
+            path="/models/Decors/chat.glb"
+            position={{ x: -15, y: 0.2, z: 1 }}
+            scale={1}
+            />
+
+        {/* stoneLantern */}
+            <Import
+            key="stoneLantern"
+            path="/models/Decors/stoneLantern.glb"
+            position={{ x: -12.8, y: -10, z: 1 }}
+            scale={1}
+            />
+
+        {/* bonsai */}
+            <Import
+            key="bonsai"
+            path="/models/Decors/bonsai.glb"
+            position={{ x: -13.5, y: 4.01, z: 0.2 }}
+            scale={1}
+            />
+
+        {/* smallPlant */}
+            <Import
+            key="smallPlant"
+            path="/models/Decors/smallPlant.glb"
+            position={{ x: -17, y: 0, z: 2 }}
+            scale={1}
+            />
+
+        {/* mangas*/}
+            <Import
+            key="mangas"
+            path="/models/Decors/mangas.glb"
+            position={{ x: -16, y: 4, z: -0.3 }}
+            scale={1}
+            />
+
+        {/* enseigne */}
+            <Import
+            key="enseigne"
+            path="/models/Fonctionnel/enseigne.glb"
+            position={{ x: 0, y: 8, z: 1 }}
+            scale={1.5}
+            />
+
+        {/* poteau_electrique */}
+            <Import
+            key="poteau_electrique"
+            path="/models/Decors/poteau_electrique.glb"
+            position={{ x: 0, y: 8, z: 1 }}
+            scale={1.5}
+            />
+
+
+
+
+        {/* plaques_acoustiques_lattes */}
+            <Import
+            key="plaques_acoustiques_lattes"
+            path="/models/Decors/plaques_acoustiques_lattes.glb"
+            position={{ x: latte_x, y: -8, z: latte_z }}
+            scale={1}
+            />
+
+        {/* plaques_acoustiques_lattes2 */}
+            <Import
+            key="plaques_acoustiques_lattes2"
+            path="/models/Decors/plaques_acoustiques_lattes.glb"
+            position={{ x: latte_x, y: -5, z: latte_z }}
+            scale={1}
+            />
+
+        {/* plaques_acoustiques_lattes3 */}
+            <Import
+            key="plaques_acoustiques_lattes3"
+            path="/models/Decors/plaques_acoustiques_lattes.glb"
+            position={{ x: latte_x, y: -2, z: latte_z }}
+            scale={1}
+            />
+
+
+
+
+        {/* Boutons */}
+            <Import
+            key="about"
+            path="/models/Fonctionnel/BTNabout.glb"
+            position={{ x: BTN_x, y: -4.11, z: BTN_z }}
+            scale={2.38}
+            />
+            <Import
+            key="projets"
+            path="/models/Fonctionnel/BTNprojets.glb"
+            position={{ x: BTN_x, y: -3.96, z: BTN_z }}
+            scale={2.38}
+            />
+            <Import
+            key="competences"
+            path="/models/Fonctionnel/BTNcompetences.glb"
+            position={{ x: BTN_x, y: -3.82, z: BTN_z }}
+            scale={2.38}
+            />
+            <Import
+            key="parcours"
+            path="/models/Fonctionnel/BTNparcours.glb"
+            position={{ x: BTN_x, y: -3.67, z: BTN_z }}
+            scale={2.38}
+            />
+            <Import
+            key="contact"
+            path="/models/Fonctionnel/BTNcontact.glb"
+            position={{ x: BTN_x, y: -3.52, z: BTN_z }}
+            scale={2.38}
+            />
+
+             {/* Encadrement des boutons */}
+            <Import
+            key="encadre"
+            path="/models/Decors/Encadre.glb"
+            position={{ x: -11.2, y: -2.8, z: 0 }}
+            scale={2.233}
+            />
+
+
+        {/* Sol */}
             <Ground />
+            <Top />
         </>
     )
 }

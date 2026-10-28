@@ -13,17 +13,17 @@ export default function useObjects() {
             Ground: folder({
                 groundPosition: {
                     label: "position",
-                    value: { x: 0, y: -10, z: 14 },
+                    value: { x: 0, y: -10, z: 12 },
                     step: 0.01,
                 },
                 groundScale: {
                     label: "scale",
-                    value: 16,
+                    value: 13,
                     step: 0.01,
                 },
                 groundColor: {
                     label: "Couleur",
-                    value: '#313131'
+                    value: '#252c36'
                 },
                 groundVisible: {
                     label: "Wireframe",
