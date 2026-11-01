@@ -17,7 +17,11 @@ export default function Home() {
                 <p className={ style.paragraph }>{ home.paragraph }</p>
 
                 <div className={ style.action }>
-                    <BtnRetour Label="ENTRER DANS LE PORTFOLIO" To={ "/about" }/>
+                    <BtnRetour 
+                    Label="ENTRER DANS LE PORTFOLIO" 
+                    To={ "/about" }
+                    Section="about"
+                    />
                 </div>
             </section>
         </main>

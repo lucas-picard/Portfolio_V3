@@ -3,8 +3,11 @@
 // ========================================================================
 
 // Importation des bibliothèques et des composants nécessaires
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 import Import from '../../components/Import'
+
+// Importation du store
+import { useSectionStore } from '../../store/useSectionStore.jsx'
 
 
 
@@ -28,8 +31,8 @@ function BTN_select(y)
 export default function RouteBTN() 
 {
 // -- Variables et constantes --    
-// State pour suivre la section actuellement sélectionnée
-    const [selectedSection, setSelectedSection] = useState('')
+    const selectedSection = useSectionStore((state) => state.selectedSection)
+    const setSelectedSection = useSectionStore((state) => state.setSelectedSection)
 
     const selectSection = (section, path) => {
         setSelectedSection(section)
@@ -148,6 +151,4 @@ export default function RouteBTN()
   )
 }
 
-
-export const about = 'about'
-export const projets = 'projets'
+export { BTN_select }

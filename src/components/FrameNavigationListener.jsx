@@ -1,4 +1,6 @@
 // Écoute les demandes de navigation envoyées par les boutons de la scène 3D.
+// 
+// ========================================================================
 
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
