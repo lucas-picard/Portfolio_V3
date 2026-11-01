@@ -10,6 +10,10 @@ export default function Import({
     path,
     position = DEFAULT_POSITION,
     scale = DEFAULT_SCALE,
+    onClick,
+    onPointerEnter,
+    onPointerLeave,
+    ref
 }) 
 
 {
@@ -25,6 +29,10 @@ export default function Import({
             object={scene}
             position={resolvedPosition}
             scale={scale}
+            onClick={onClick}
+            onPointerEnter={onPointerEnter}
+            onPointerLeave={onPointerLeave}
+            ref={ref}
         />
     )
 }
