@@ -4,12 +4,13 @@
 
 
 
-import Import from '../Objects/Import'
+import Import from '../../components/Import'
 import Ground from '../Objects/Gound'
 import Top from '../Objects/Top'
+import { Text3D } from '@react-three/drei'
 
 
-export default function Experience({ ground })
+export default function Experience()
 {
 
    
@@ -19,6 +20,7 @@ export default function Experience({ ground })
 
     return(
         <>
+
         {/* Panneau */}
             <Import
             key="panneau"
@@ -141,13 +143,7 @@ export default function Experience({ ground })
             scale={1}
             />
 
-        {/* enseigne */}
-            <Import
-            key="enseigne"
-            path="/models/Fonctionnel/enseigne.glb"
-            position={{ x: 0, y: 8, z: 1 }}
-            scale={1.5}
-            />
+      
 
         {/* poteau_electrique */}
             <Import
@@ -186,6 +182,45 @@ export default function Experience({ ground })
 
 
 
+          {/* enseigne */}
+            <Import
+            key="enseigne"
+            path="/models/Fonctionnel/enseigne.glb"
+            position={{ x: 0, y: 8, z: 1 }}
+            scale={1.5}
+            />
+
+            <Text3D
+                font="../../../static/font/VT323_Regular.json"
+                position={ [ -3.5, 7.48, 1.33 ] }
+                size={ 0.8 }
+                height={ 0.09 }
+                curveSegments={ 1 }
+                bevelEnabled
+                bevelThickness={ 0.02 }
+                bevelSize={ 0.02 }
+                bevelOffset={ 0 }
+                bevelSegments={ 5 }
+            >
+                PORTFOLIO
+            <meshBasicMaterial color="#7cc84a" />
+        </Text3D>
+
+        <Text3D
+                font="../../../static/font/VT323_Regular.json"
+                position={ [ -3, 6.82, 1.33 ] }
+                size={ 0.4 }
+                height={ 0.09 }
+                curveSegments={ 1 }
+                bevelEnabled
+                bevelThickness={ 0.02 }
+                bevelSize={ 0.02 }
+                bevelOffset={ 0 }
+                bevelSegments={ 5 }
+            >
+                v3.0.0
+            <meshBasicMaterial color="#7cc84a" />
+        </Text3D>
 
         
 
@@ -201,6 +236,8 @@ export default function Experience({ ground })
         {/* Sol, Plafond */}
             <Ground />
             <Top />
+
+            
         </>
     )
 }

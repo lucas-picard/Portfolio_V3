@@ -2,8 +2,62 @@
 // 
 // ========================================================================
 
+import { useMemo, useRef } from 'react'
+import { useFrame, useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+
 export default function Light()
 {
+    const ledModel = useLoader(GLTFLoader, '/models/Decors/barre_led.glb')
+    const ledMaterials = useMemo(() => {
+        const materials = []
+        ledModel.scene.traverse((object) => {
+            if (object.isMesh && ['Diffuseur_lumineux', 'Noyau_LED'].includes(object.name)) {
+                const objectMaterials = Array.isArray(object.material)
+                    ? object.material
+                    : [object.material]
+                objectMaterials.forEach((material) => {
+                    materials.push({ material, intensity: material.emissiveIntensity })
+                })
+            }
+        })
+        return materials
+    }, [ledModel.scene])
+    const ledLights = useRef([])
+    const flicker = useRef({
+        next: 6,
+        until: 0,
+        nextStep: 0,
+        intensity: 12,
+    })
+
+    useFrame(({ clock }) => {
+        const now = clock.elapsedTime
+        const state = flicker.current
+
+        if (now >= state.next && now >= state.until) {
+            state.until = now + 0.2 + Math.random() * 0.2
+            state.next = now + 7 + Math.random() * 12
+            state.nextStep = now
+        }
+
+        if (now < state.until && now >= state.nextStep) {
+            const levels = [0.05, 0.2, 0.7, 1, 0.1, 0.85]
+            state.intensity = 12 * levels[Math.floor(Math.random() * levels.length)]
+            state.nextStep = now + 0.03 + Math.random() * 0.05
+        } else if (now >= state.until) {
+            state.intensity = 12
+        }
+
+        ledLights.current.forEach((light) => {
+            if (light) light.intensity = state.intensity
+        })
+
+        const brightness = state.intensity / 12
+        ledMaterials.forEach(({ material, intensity }) => {
+            material.emissiveIntensity = intensity * brightness
+        })
+    })
 
     return(
         <>
@@ -11,6 +65,7 @@ export default function Light()
 
         {/* Led au centre */}
             <rectAreaLight
+                ref={(light) => { ledLights.current[0] = light }}
                 position={ [ 0, 3.65, 0.6 ] }
                 rotation-x={Math.PI / 2}
                 width={7.1}
@@ -20,6 +75,7 @@ export default function Light()
                 decay={2}
             />
             <rectAreaLight
+                ref={(light) => { ledLights.current[1] = light }}
                 position={ [ 0, 3.65, 0.6 ] }
                 rotation-x={Math.PI / 2}
                 width={-7.1}

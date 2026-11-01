@@ -10,7 +10,9 @@ export default function Import({
     path,
     position = DEFAULT_POSITION,
     scale = DEFAULT_SCALE,
-}) {
+}) 
+
+{
     const gltf = useLoader(GLTFLoader, path)
     const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene])
 

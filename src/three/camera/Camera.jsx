@@ -2,7 +2,6 @@
 // 
 // ========================================================================
 
-// eslint-disable-next-line no-unused-vars -- Imported for the commented OrbitControls example below.
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 export default function Camera( { fov = 45 } ) {
