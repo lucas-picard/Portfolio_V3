@@ -4,6 +4,8 @@
 
 // Importation des bibliothèques et des composants nécessaires
 import { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
+import { easing } from 'maath'
 import Import from '../../components/Import'
 
 // Importation du store
@@ -55,21 +57,26 @@ export default function RouteBTN()
     const contact = useRef()
 
 
-// -- Fonctions --
-// Fonction pour créer un indicateur visuel sur le bouton sélectionné
+// -- Animations --
 
+useFrame((_, delta) => {
+    // Animation celon le boutons lors du survol de la souris
+    if (about.current) easing.damp(about.current.position, 'z', about.current.userData.targetZ ?? 0.02, 0.1, delta)
+    if (projets.current) easing.damp(projets.current.position, 'z', projets.current.userData.targetZ ?? 0.02, 0.1, delta)
+    if (skill.current) easing.damp(skill.current.position, 'z', skill.current.userData.targetZ ?? 0.02, 0.1, delta)
+    if (journey.current) easing.damp(journey.current.position, 'z', journey.current.userData.targetZ ?? 0.02, 0.1, delta)
+    if (contact.current) easing.damp(contact.current.position, 'z', contact.current.userData.targetZ ?? 0.02, 0.1, delta)
+})
 
-// Fonction pour changer le curseur en pointeur lorsque la souris survole le bouton
-    const PointerEnter = (e) => {
-        document.body.style.cursor = 'pointer'
-        e.current.position.z = 0.2 // Agrandir le bouton survolé
-    }
+const PointerEnter = (ref) => {
+    document.body.style.cursor = 'pointer'
+    ref.current.userData.targetZ = 0.2
+}
 
-// Fonction pour réinitialiser le curseur lorsque la souris quitte le bouton
-    const PointerLeave = (e) => {
-        document.body.style.cursor = 'default'
-        e.current.position.z = 0.02 // Réinitialiser la taille du bouton
-    }
+const PointerLeave = (ref) => {
+    document.body.style.cursor = 'default'
+    ref.current.userData.targetZ = 0.02
+}
   
 
 // -- Rendu du composant --
