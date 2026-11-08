@@ -11,7 +11,7 @@ import About from "./scenes/About/About.jsx"
 import Journey from "./scenes/Journey/Journey.jsx"
 import Skills from "./scenes/Skills/Skills.jsx"
 import Projects from "./scenes/Projects/Projects.jsx"
-import Contact from "./scenes/Contact/Contact.jsx"
+import Contact from "./scenes/Contact/contact.jsx"
 import NotFound from "./scenes/NotFound/NotFound.jsx"
 import Light2D from "./components/Light/2D_Light.jsx"
 

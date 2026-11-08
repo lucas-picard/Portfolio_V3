@@ -50,11 +50,6 @@ const contact = {
         type: 'email',
       },
       {
-        name: 'subject',
-        label: 'Objet',
-        type: 'text',
-      },
-      {
         name: 'message',
         label: 'Message',
         type: 'textarea',

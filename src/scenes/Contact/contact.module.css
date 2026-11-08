@@ -233,6 +233,21 @@
   box-shadow: 0 0 10px rgb(124 200 74 / 20%);
 }
 
+.submitButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.formStatus {
+  margin: 0;
+  color: var(--accent-bright);
+  font-size: 0.75rem;
+}
+
+.formError {
+  color: #ff8a80;
+}
+
 /* Affichage vertical sur les écrans étroits */
 @media (max-width: 760px) {
   /* Réduit les marges et espaces des deux colonnes sur petits écrans. */

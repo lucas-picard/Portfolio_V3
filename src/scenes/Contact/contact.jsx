@@ -2,12 +2,48 @@
 //
 // ========================================================================
 
+import { useState } from "react"
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import Icon from "../../components/Icon.jsx"
 import contact from "../../content/contact.js"
-import style from "./Contact.module.css"
+import style from "./contact.module.css"
 
 export default function Contact() {
+    const [status, setStatus] = useState("idle")
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget
+        const formData = new FormData(form);
+        setStatus("sending")
+        setErrorMessage("")
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            })
+            const data = await response.json()
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.body?.message || data.message || `Erreur HTTP ${response.status}`)
+            }
+
+            setStatus("success")
+            form.reset()
+        } catch (error) {
+            console.error("Échec de l’envoi du formulaire de contact :", error)
+            setErrorMessage(error instanceof Error ? error.message : "Erreur réseau inconnue.")
+            setStatus("error")
+        }
+    };
+
+
     return (
         <main className={style.contact}>
             {/* En-tête et bouton de retour */}
@@ -99,49 +135,46 @@ export default function Contact() {
                         {contact.form.title}
                     </h2>
 
-                    <form className={style.form} onSubmit={(event) => event.preventDefault()}>
-                        <label>
-                            {contact.form.fields[0].label}
-                            <input
-                                name={contact.form.fields[0].name}
-                                type={contact.form.fields[0].type}
-                                autoComplete="name"
-                                required
-                            />
-                        </label>
+                    <form
+                        className={style.form}
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                        onSubmit={onSubmit}
+                    >
+                        <input type="hidden" name="access_key" value="442b7a70-4a36-4357-a73d-6982d9b3b173" />
+                        {contact.form.fields.map((field) => (
+                            <label key={field.name}>
+                                {field.label}
+                                {field.type === "textarea" ? (
+                                    <textarea name={field.name} rows="5" required />
+                                ) : (
+                                    <input
+                                        name={field.name}
+                                        type={field.type}
+                                        autoComplete={field.name === "name" || field.name === "email" ? field.name : undefined}
+                                        required
+                                    />
+                                )}
+                            </label>
+                        ))}
 
-                        <label>
-                            {contact.form.fields[1].label}
-                            <input
-                                name={contact.form.fields[1].name}
-                                type={contact.form.fields[1].type}
-                                autoComplete="email"
-                                required
-                            />
-                        </label>
-
-                        <label>
-                            {contact.form.fields[2].label}
-                            <input
-                                name={contact.form.fields[2].name}
-                                type={contact.form.fields[2].type}
-                                required
-                            />
-                        </label>
-
-                        <label>
-                            {contact.form.fields[3].label}
-                            <textarea
-                                name={contact.form.fields[3].name}
-                                rows="5"
-                                required
-                            />
-                        </label>
-
-                        <button className={style.submitButton} type="submit">
+                        <button className={style.submitButton} type="submit" disabled={status === "sending"}>
                             <Icon name="send" set="gentle" size={16} />
-                            {contact.form.submitLabel}
+                            {status === "sending" ? "Envoi en cours..." : contact.form.submitLabel}
                         </button>
+                        {status !== "idle" && (
+                            <p
+                                className={`${style.formStatus} ${status === "error" ? style.formError : ""}`}
+                                role={status === "error" ? "alert" : "status"}
+                                aria-live={status === "error" ? "assertive" : "polite"}
+                            >
+                                {status === "success"
+                                    ? contact.form.successMessage
+                                    : status === "error"
+                                        ? `${contact.form.errorMessage} (${errorMessage})`
+                                        : "Envoi en cours..."}
+                            </p>
+                        )}
                     </form>
                 </section>
             </div>
