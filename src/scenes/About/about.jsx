@@ -17,11 +17,7 @@ export default function About() {
                     <p className={style.tagline}>{about.tagline}</p>
                 </div>
                 <div className={style.returnButton}>
-                    <a className={style.downloadButton} href="/assets/CV.pdf" download>
-                        <Icon name="download" size={16} />
-                        Télécharger mon CV
-                    </a>
-                    <BtnRetour Label="Accueil" To="/" />
+                    <BtnRetour Label="Accueil" To="/" Compact />
                 </div>
             </header>
 

@@ -20,7 +20,7 @@ export default function Journey() {
                 </div>
 
                 <div className={style.returnButton}>
-                    <BtnRetour Label="Accueil" To="/" />
+                    <BtnRetour Label="Accueil" To="/" Compact />
                 </div>
             </header>
 

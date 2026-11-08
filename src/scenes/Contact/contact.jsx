@@ -18,7 +18,7 @@ export default function Contact() {
                     <p className={style.tagline}>{contact.tagline}</p>
                 </div>
                 <div className={style.returnButton}>
-                    <BtnRetour Label="Accueil" To="/" />
+                    <BtnRetour Label="Accueil" To="/" Compact />
                 </div>
             </header>
 

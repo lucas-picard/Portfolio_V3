@@ -1,4 +1,425 @@
-/* Fichier du style de la page Projects
- * 
+/*
+ * Fichier du style de la page Projects
+ *
  * ========================================================================
  */
+
+.projects {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(0.65rem, 2.4vh, 1.5rem) clamp(0.8rem, 3.5vw, 2.8rem);
+  background:
+    radial-gradient(ellipse 66% 56% at 58% 0%, rgb(115 120 125 / 12%), transparent 75%),
+    radial-gradient(ellipse 40% 22% at 0% 100%, rgb(65 95 43 / 4%), transparent 80%),
+    #080909;
+}
+
+/* Titres et navigation de retour */
+.header,
+.detailHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto clamp(0.6rem, 1.5vh, 1.1rem);
+}
+
+.title,
+.detailTitle {
+  /* Police pixel et contraste communs aux titres de liste et de fiche. */
+  color: #e0e1dc;
+  font-family: var(--font-pixel);
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 70%), 0 0 24px rgb(255 255 255 / 12%);
+}
+
+.tagline,
+.detailSubtitle {
+  margin-top: 0.6rem;
+  color: var(--accent-bright);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+  letter-spacing: 0.06em;
+}
+
+.returnButton {
+  flex: 0 0 auto;
+  padding-top: 0.1rem;
+}
+
+/* Grille de sélection des projets */
+.projectGrid {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.55rem, 1.4vw, 1rem);
+  max-width: 90rem;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.projectCard {
+  /* Chaque carte prend la hauteur disponible sans agrandir la page. */
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  padding: clamp(0.55rem, 1vw, 0.9rem);
+  border: 1px solid rgb(207 208 204 / 10%);
+  background: linear-gradient(155deg, #121414, #0d0f0f 70%);
+  box-shadow: 0 18px 38px -28px rgb(0 0 0 / 95%);
+  transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-3px);
+  border-color: rgb(124 200 74 / 45%);
+  background: linear-gradient(155deg, #151717, #0e1010 70%);
+}
+
+.cardNumber {
+  /* Le numéro reste au-dessus de la zone de visualisation vide. */
+  align-self: flex-start;
+  flex: 0 0 auto;
+  margin-bottom: clamp(0.3rem, 0.8vh, 0.6rem);
+  padding: 0.2rem 0.35rem;
+  border: 1px solid rgb(207 208 204 / 22%);
+  color: #c4c6c1;
+  background: #090a0a;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.projectVisual,
+.detailVisual {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid rgb(207 208 204 / 6%);
+  background: linear-gradient(145deg, #111313, #0c0e0e);
+}
+
+.projectVisual {
+  flex: 1;
+  min-height: 0;
+  margin-bottom: clamp(0.45rem, 1vh, 0.8rem);
+}
+
+/* Texte, technologies et action de chaque carte */
+.cardContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cardCategory {
+  /* La catégorie distingue rapidement le domaine du projet. */
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+}
+
+.cardContent h2 {
+  margin-top: 0.35rem;
+  color: var(--accent-bright);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  letter-spacing: 0.05em;
+  overflow-wrap: anywhere;
+}
+
+.cardDescription {
+  /* Texte résumé gardé compact pour préserver la place des actions. */
+  margin-top: clamp(0.25rem, 0.6vh, 0.45rem);
+  color: #b7b9b4;
+  font-size: clamp(0.64rem, 1.2vh, 0.76rem);
+  line-height: 1.4;
+}
+
+.cardStack,
+.detailStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: clamp(0.35rem, 0.8vh, 0.65rem) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cardStack li,
+.detailStack li {
+  padding: 0.25rem 0.45rem;
+  border: 1px solid rgb(207 208 204 / 12%);
+  color: #c9cac6;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+}
+
+.openProjectButton,
+.paginationButton,
+.backToProjects {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid rgb(124 200 74 / 48%);
+  color: var(--accent-bright);
+  background: rgb(10 11 12 / 65%);
+  font-family: var(--font-pixel);
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.openProjectButton {
+  align-self: center;
+  margin-top: auto;
+  padding: 0.48rem 0.65rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+}
+
+.openProjectButton:hover,
+.paginationButton:hover,
+.backToProjects:hover {
+  border-color: var(--accent);
+  background: rgb(124 200 74 / 9%);
+}
+
+.openProjectButton:focus-visible,
+.paginationButton:focus-visible,
+.backToProjects:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.pagination {
+  /* La pagination reste en dehors des cartes, en bas de l'écran. */
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: clamp(0.45rem, 1vh, 0.75rem) auto 0;
+  color: #b8bab5;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.paginationButton {
+  min-width: 4.5rem;
+  padding: 0.42rem 0.55rem;
+  font-size: 0.65rem;
+}
+
+/* Mise en page de la fiche détaillée */
+.detailPage {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 90rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.detailHeader {
+  /* L'en-tête ne rétrécit pas quand le contenu de la fiche est long. */
+  align-items: flex-start;
+  flex: 0 0 auto;
+  margin-bottom: clamp(0.55rem, 1.5vh, 1rem);
+}
+
+.detailTitle {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.detailSubtitle {
+  text-transform: uppercase;
+}
+
+.backToProjects {
+  flex: 0 0 auto;
+  padding: 0.48rem 0.65rem;
+  font-size: 0.65rem;
+}
+
+.detailLayout {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(0.7rem, 1.6vw, 1.4rem);
+  min-height: 0;
+}
+
+.detailVisual {
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  background: linear-gradient(145deg, #101212, #090a0a);
+}
+
+.detailContent {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: clamp(0.4rem, 1vh, 0.75rem) clamp(0.6rem, 1vw, 1rem);
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.detailSection h2 {
+  /* Titres verts pour séparer clairement les informations de la fiche. */
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.25rem;
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.58rem, 1vh, 0.7rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.detailSection > p {
+  color: #bfc1bc;
+  font-family: var(--font-mono);
+  font-size: clamp(0.58rem, 1.15vh, 0.72rem);
+  line-height: 1.45;
+}
+
+.detailStack {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.detailContent > .detailSection:last-of-type {
+  grid-column: 1 / -1;
+}
+
+.detailStatus {
+  /* L'état du projet est mis en évidence avec une couleur ambre discrète. */
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid rgb(242 189 76 / 30%);
+  color: #c8c0a8;
+  background: rgb(242 189 76 / 4%);
+  font-family: var(--font-mono);
+  font-size: clamp(0.58rem, 1vh, 0.68rem);
+  line-height: 1.35;
+}
+
+.detailStatus span {
+  flex: 0 0 auto;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: 0.35rem;
+  border-radius: 50%;
+  background: var(--amber-ui);
+}
+
+.detailLinks {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.detailLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgb(124 200 74 / 45%);
+  color: var(--accent-bright);
+  background: rgb(10 11 12 / 70%);
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+.detailLinks a:hover {
+  border-color: var(--accent);
+  background: rgb(124 200 74 / 8%);
+}
+
+/* Ajustements pour tablette et téléphone */
+@media (max-width: 850px) {
+  /* Sur tablette, la sélection passe à deux colonnes et la fiche à une colonne. */
+  .projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detailLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detailVisual {
+    display: none;
+  }
+
+  .detailContent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  /* Sur téléphone, les projets s'affichent un par page. */
+  .projects {
+    padding: 1rem;
+  }
+
+  .header,
+  .detailHeader {
+    gap: 0.75rem;
+  }
+
+  .title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .projectGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detailTitle {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .pagination {
+    gap: 0.45rem;
+  }
+}
+
+@media (max-height: 700px) {
+  /* Réduit les espacements lorsque l'écran manque de hauteur. */
+  .tagline,
+  .detailSubtitle {
+    margin-top: 0.25rem;
+    font-size: 0.65rem;
+  }
+
+  .projectCard {
+    padding: 0.45rem;
+  }
+
+  .cardStack li {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.58rem;
+  }
+}
