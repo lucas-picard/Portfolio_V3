@@ -7,16 +7,17 @@ import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import Icon from "../../components/Icon.jsx"
 import projects from "../../content/project.js"
 import ProjectDetail from "./ProjectDetail.jsx"
+import ProjectModel from "./ProjectModel.jsx"
 import style from "./Projects.module.css"
 
 // Les contenus viennent de project.js ; cette liste ajoute une catégorie d'affichage.
 const projectList = [
-    { data: projects.bladeclicker, category: "SYSTÈMES EMBARQUÉS" },
-    { data: projects.codewars, category: "ALGORITHMES" },
-    { data: projects.iaNeuronal1, category: "INTELLIGENCE ARTIFICIELLE" },
-    { data: projects.loginSecure, category: "DÉVELOPPEMENT WEB" },
-    { data: projects.portfolioV3, category: "WEB & 3D" },
-    { data: projects.rubberDucky, category: "SYSTÈMES EMBARQUÉS" },
+    { data: projects.bladeclicker, category: "SYSTÈMES EMBARQUÉS", model: "calculatrice.glb" },
+    { data: projects.codewars, category: "ALGORITHMES", model: "projet-codewars.glb" },
+    { data: projects.iaNeuronal1, category: "INTELLIGENCE ARTIFICIELLE", model: "projet-ia-neuronal1.glb" },
+    { data: projects.loginSecure, category: "DÉVELOPPEMENT WEB", model: "projet-login-secure.glb" },
+    { data: projects.portfolioV3, category: "WEB & 3D", model: "projet-portfolio-v3.glb" },
+    { data: projects.rubberDucky, category: "SYSTÈMES EMBARQUÉS", model: "projet-rubber-ducky.glb" },
 ]
 
 // Choisit le nombre de cartes à afficher selon la largeur disponible.
@@ -57,6 +58,7 @@ export default function Projects() {
             <main className={style.projects}>
                 <ProjectDetail
                     project={projectList[selectedProject].data}
+                    model={projectList[selectedProject].model}
                     onBack={() => setSelectedProject(null)}
                 />
             </main>
@@ -78,7 +80,7 @@ export default function Projects() {
 
             {/* Liste des projets */}
             <section className={style.projectGrid} aria-label="Choisir un projet">
-                {visibleProjects.map(({ data, category }, index) => {
+                {visibleProjects.map(({ data, category, model }, index) => {
                     const projectIndex = firstProject + index
 
                     return (
@@ -86,8 +88,9 @@ export default function Projects() {
                             <span className={style.cardNumber}>
                                 {projects.labels[projectIndex]}
                             </span>
-                            {/* Zone vide réservée à une future image du projet */}
-                            <div className={style.projectVisual} aria-hidden="true" />
+                            <div className={style.projectVisual}>
+                                <ProjectModel file={model} />
+                            </div>
                             <div className={style.cardContent}>
                                 <p className={style.cardCategory}>{category}</p>
                                 <h2>{data.title}</h2>

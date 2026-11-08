@@ -88,7 +88,7 @@
 }
 
 .cardNumber {
-  /* Le numéro reste au-dessus de la zone de visualisation vide. */
+  /* Le numéro reste au-dessus de la zone de visualisation. */
   align-self: flex-start;
   flex: 0 0 auto;
   margin-bottom: clamp(0.3rem, 0.8vh, 0.6rem);
@@ -100,7 +100,7 @@
   font-size: 0.75rem;
 }
 
-/* Zones de visualisation conservées volontairement vides. */
+/* Cadres des modèles 3D, en cartes et dans la fiche détaillée. */
 .projectVisual,
 .detailVisual {
   position: relative;
@@ -117,10 +117,22 @@
   margin-bottom: clamp(0.45rem, 1vh, 0.8rem);
 }
 
+/* Le canvas remplit son cadre sans fond opaque. */
+.projectVisual :global(.project-model),
+.detailVisual :global(.project-model) {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.projectVisual :global(.project-model canvas),
+.detailVisual :global(.project-model canvas) {
+  background: transparent;
+}
+
 /* Texte, technologies et action de chaque carte */
 .cardContent {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -188,7 +200,7 @@
 
 .openProjectButton {
   align-self: center;
-  margin-top: auto;
+  margin-top: clamp(0.2rem, 0.5vh, 0.4rem);
   padding: 0.48rem 0.65rem;
   font-size: 0.64rem;
   letter-spacing: 0.04em;
@@ -285,7 +297,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-content: start;
-  gap: clamp(0.4rem, 1vh, 0.75rem) clamp(0.6rem, 1vw, 1rem);
+  gap: clamp(0.2rem, 0.5vh, 0.4rem) clamp(0.45rem, 0.7vw, 0.7rem);
   min-width: 0;
   min-height: 0;
   overflow: hidden;
@@ -296,7 +308,7 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
   color: var(--accent);
   font-family: var(--font-pixel);
   font-size: clamp(0.58rem, 1vh, 0.7rem);
@@ -326,9 +338,9 @@
   /* L'état du projet est mis en évidence avec une couleur ambre discrète. */
   grid-column: 1 / -1;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.35rem;
   align-items: flex-start;
-  padding: 0.45rem 0.55rem;
+  padding: 0.3rem 0.45rem;
   border: 1px solid rgb(242 189 76 / 30%);
   color: #c8c0a8;
   background: rgb(242 189 76 / 4%);
@@ -351,7 +363,7 @@
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.4rem;
 }
 
 .detailLinks a {

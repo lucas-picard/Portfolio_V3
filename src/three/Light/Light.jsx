@@ -121,9 +121,9 @@ export default function Light()
                 position={[0, -8.4, 1]}
                 rotation-x={-2 * Math.PI / 3}
                 width={19.5}
-                height={15}
+                height={3.5}
                 color="#dad7cd"
-                intensity={1}
+                intensity={0.5}
             />
 
         {/* Led etagere */}

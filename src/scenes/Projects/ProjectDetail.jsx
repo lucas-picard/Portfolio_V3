@@ -3,9 +3,10 @@
 // ========================================================================
 
 import Icon from "../../components/Icon.jsx"
+import ProjectModel from "./ProjectModel.jsx"
 import style from "./Projects.module.css"
 
-export default function ProjectDetail({ project, onBack }) {
+export default function ProjectDetail({ project, model, onBack }) {
     return (
         <div className={style.detailPage}>
             {/* Nom du projet et retour à la grille */}
@@ -19,9 +20,11 @@ export default function ProjectDetail({ project, onBack }) {
                     PROJETS
                 </button>
             </header>
-            {/* Le texte est à droite ; la zone vide accueillera un visuel ultérieurement. */}
+            {/* Le modèle 3D accompagne les informations détaillées. */}
             <div className={style.detailLayout}>
-                <div className={style.detailVisual} aria-hidden="true" />
+                <div className={style.detailVisual}>
+                    <ProjectModel file={model} />
+                </div>
 
                 <div className={style.detailContent}>
                     {/* Présentation du projet */}
