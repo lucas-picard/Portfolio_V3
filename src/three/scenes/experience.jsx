@@ -7,6 +7,7 @@
 import Import from '../../components/Import'
 import Ground from '../Objects/Gound'
 import Top from '../Objects/Top'
+import VoxelBot from '../Objects/VoxelBot'
 import { Text3D } from '@react-three/drei'
 
 
@@ -103,13 +104,8 @@ export default function Experience()
             scale={2}
             />
         
-        {/* chat */}
-            <Import
-            key="chat"
-            path="/models/Decors/chat.glb"
-            position={{ x: -15, y: 0.2, z: 1 }}
-            scale={1}
-            />
+        {/* Robot cubique */}
+            <VoxelBot position={[-15, 0.2, 1]} />
 
         {/* stoneLantern */}
             <Import

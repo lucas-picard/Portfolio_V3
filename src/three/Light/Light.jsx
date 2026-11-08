@@ -61,7 +61,7 @@ export default function Light()
 
     return(
         <>
-            <ambientLight intensity={0.7} />
+            <ambientLight intensity={0.6} />
 
         {/* Led au centre */}
             <rectAreaLight
@@ -92,7 +92,7 @@ export default function Light()
                 width={2}
                 height={15}
                 color="#fc0000"
-                intensity={8}
+                intensity={6}
             />
 
        
@@ -112,7 +112,7 @@ export default function Light()
                 width={3.5}
                 height={5}
                 color="#a7ff02"
-                intensity={1}
+                intensity={0.7}
             />
         </group>
     
@@ -123,7 +123,7 @@ export default function Light()
                 width={19.5}
                 height={15}
                 color="#dad7cd"
-                intensity={0.5}
+                intensity={1}
             />
 
         {/* Led etagere */}
@@ -143,7 +143,7 @@ export default function Light()
                     width={2.5}
                     height={10}
                     color="#a7ff02"
-                    intensity={1}
+                    intensity={0.5}
                 />
             </group>
 

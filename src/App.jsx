@@ -13,6 +13,7 @@ import Skills from "./scenes/Skills/Skills.jsx"
 import Projects from "./scenes/Projects/Projects.jsx"
 import Contact from "./scenes/Contact/Contact.jsx"
 import NotFound from "./scenes/NotFound/NotFound.jsx"
+import Light2D from "./components/Light/2D_Light.jsx"
 
 // Importation du composant qui écoute les demandes de navigation
 import FrameNavigationListener from "./components/FrameNavigationListener.jsx"
@@ -34,6 +35,9 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      {/* Light pour avoir l'effet lumineux sur l'iframe */}
+      <Light2D />
     </MemoryRouter>
   );
 }

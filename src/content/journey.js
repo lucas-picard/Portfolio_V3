@@ -8,14 +8,16 @@ const journey = {
   commande: "$ cat /var/log/parcours.log",
 
   recherche: {
-    title: 'RECHERCHE',
+    title: 'RECHERCHE ACTUELLEMENT',
     date: '2027',
     actuel: {
         subtitle: 'Stage en développement',
         lieu: 'Lons-le-Saunier / Lyon',
         Dates: "25/01/2027 - 13/02/2027",
         description: "Je suis ouvert a tout les domaines du développement" +
-                    "(IA, Web, Cyber, devops, embarqué, logiciel, etc...)" 
+                    "(IA, Web, Cyber, devops, embarqué, logiciel, etc...)",
+        plus: "N'hésitez pas à me contacter pour toute opportunité de stage ou d'alternance." 
+        
       },
   },
 

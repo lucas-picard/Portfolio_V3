@@ -1,4 +1,4 @@
-// Fichier de contenu de la page Competences : categories et niveaux
+// Fichier de contenu de la page Competences : catégories et compétences
 // 
 // ========================================================================
 
@@ -6,12 +6,6 @@ const skills = {
     title: 'COMPÉTENCES',
     tagline: 'Du développement logiciel au matériel, en passant par les outils et les systèmes informatiques.',
     commande: "$ cat /var/log/skills.log",
-    legende: {
-        maitrise: "Maîtrise",
-        solide: "Solide",
-        base: "Base",
-    },
-    
     langages: {
         title: 'LANGAGES',
         cpp: "C++",
@@ -60,7 +54,7 @@ const skills = {
         autonomie: "Autonomie",
         adaptabilite: "Adaptabilité",
         curiosite: "Curiosité",
-    }
+    },
 }
 
 

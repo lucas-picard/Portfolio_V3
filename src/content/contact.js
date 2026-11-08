@@ -51,9 +51,8 @@ const contact = {
       },
       {
         name: 'subject',
-        label: 'Sujet',
-        type: 'select',
-        options: ['Stage', 'École', 'Autre'],
+        label: 'Objet',
+        type: 'text',
       },
       {
         name: 'message',

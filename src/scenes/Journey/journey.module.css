@@ -1,4 +1,260 @@
 /* Fichier du style de la page Journey
- * 
+ *
  * ========================================================================
  */
+
+/* Page défilante avec le fond lumineux commun aux autres sections */
+.journey {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+  background:
+    radial-gradient(ellipse 75% 65% at 65% 0%, rgb(190 195 200 / 26%), rgb(95 100 105 / 10%) 42%, transparent 78%),
+    var(--bg);
+}
+
+/* Titre de page, commande décorative et bouton de retour */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 90rem;
+  margin: 0 auto clamp(2rem, 5vh, 3rem);
+  padding-bottom: clamp(1rem, 2.5vh, 1.75rem);
+  border-bottom: 1px solid rgb(207 208 204 / 14%);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+}
+
+.title {
+  margin-top: 0.35rem;
+  color: #e0e1dc;
+  font-family: var(--font-pixel);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 70%), 0 0 24px rgb(255 255 255 / 12%);
+}
+
+.tagline {
+  margin-top: 0.65rem;
+  color: var(--accent-bright);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-shadow: 0 0 14px rgb(124 200 74 / 30%);
+}
+
+.command {
+  margin-top: 0.8rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.command::before {
+  color: var(--accent-dim);
+  content: "> ";
+}
+
+.returnButton {
+  flex: 0 0 auto;
+  padding-top: 0.25rem;
+}
+
+/* Chaque partie du parcours garde son propre titre et sa ligne temporelle */
+.timelineSection {
+  max-width: 90rem;
+  margin: 0 auto clamp(2rem, 5vh, 3.5rem);
+}
+
+.searchSection {
+  max-width: 58rem;
+  margin-right: auto;
+  padding: clamp(0.9rem, 1.8vw, 1.25rem);
+  border: 1px solid rgb(242 189 76 / 28%);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(242 189 76 / 8%), transparent 58%),
+    linear-gradient(145deg, rgb(24 26 28 / 92%), rgb(13 14 15 / 92%));
+  box-shadow: 0 14px 34px -30px rgb(242 189 76 / 40%);
+}
+
+.searchSection .sectionTitle {
+  margin-bottom: 0.7rem;
+  color: var(--amber-ui);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+}
+
+.searchSection .timeline {
+  gap: 0;
+  padding-left: 1rem;
+}
+
+.searchSection .timeline::before {
+  top: 0.3rem;
+  bottom: 0.3rem;
+  background: linear-gradient(to bottom, rgb(242 189 76 / 60%), rgb(242 189 76 / 18%));
+}
+
+.searchSection .entry {
+  padding-left: 0.35rem;
+}
+
+.searchSection .entry::before {
+  left: -0.91rem;
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.searchSection .entry h3 {
+  font-size: clamp(0.8rem, 0.95vw, 0.9rem);
+}
+
+.searchSection .entryDate,
+.searchSection .description {
+  font-size: 0.75rem;
+}
+
+.searchSection .description {
+  line-height: 1.6;
+}
+
+.searchMore {
+  margin-top: 0.6rem;
+  color: var(--text-dim);
+  font-size: 0.68rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+  color: #e0e1dc;
+  font-family: var(--font-pixel);
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* Rail verticale commune aux événements d'une section */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: clamp(1.25rem, 3vh, 2rem);
+  padding-left: 1.25rem;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.28rem;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgb(124 200 74 / 65%),
+    rgb(124 200 74 / 15%)
+  );
+  content: "";
+}
+
+/* Entrée de chronologie, sans panneau opaque pour garder un rendu léger */
+.entry {
+  --entry-accent: var(--accent);
+  position: relative;
+  min-width: 0;
+  padding: 0 0 0.2rem 0.5rem;
+}
+
+.entry::before {
+  position: absolute;
+  top: 0.35rem;
+  left: -1.16rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid var(--entry-accent);
+  background: var(--entry-accent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--entry-accent), transparent 25%);
+  content: "";
+}
+
+.searchEntry {
+  --entry-accent: var(--amber-ui);
+}
+
+.experienceEntry,
+.jobEntry {
+  --entry-accent: var(--blue);
+}
+
+.entryType {
+  display: inline-block;
+  margin-right: 0.55rem;
+  color: var(--entry-accent);
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.searchEntry .entryType {
+  padding: 0.15rem 0.4rem;
+  border: 1px solid color-mix(in srgb, var(--entry-accent), transparent 35%);
+  background: color-mix(in srgb, var(--entry-accent), transparent 92%);
+  font-size: 0.72rem;
+}
+
+.entry h3 {
+  display: inline;
+  color: #d6d7d2;
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.entryDate {
+  margin-top: 0.35rem;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.description {
+  max-width: 64rem;
+  margin-top: 0.45rem;
+  color: #a9aaa6;
+  font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+  line-height: 1.75;
+}
+
+/* Ajustements pour tablette et téléphone */
+@media (max-width: 600px) {
+  .journey {
+    padding: 1rem;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .returnButton {
+    padding-top: 0;
+  }
+
+  .entry h3 {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}

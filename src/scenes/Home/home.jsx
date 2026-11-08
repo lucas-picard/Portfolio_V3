@@ -4,6 +4,7 @@
 
 import home from "../../content/home"
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
+
 import style from "./Home.module.css"
 
 
@@ -21,9 +22,12 @@ export default function Home() {
                     Label="ENTRER DANS LE PORTFOLIO" 
                     To={ "/about" }
                     Section="about"
+                    IconName="arrow-right"
+                    IconSet="pixel"
                     />
                 </div>
             </section>
+           
         </main>
     )
 }

@@ -1,0 +1,8 @@
+Pixelarticons
+Version 2.4.2 · MIT · https://pixelarticons.com/
+License: LICENSE-PIXELARTICONS.txt
+
+Gentleface
+Version 0.6.0 · MIT · https://gentleface.com/
+Icons are from the line-round 16 px set.
+License: LICENSE-GENTLEFACE.txt
