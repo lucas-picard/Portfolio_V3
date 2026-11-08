@@ -3,23 +3,41 @@
  * ========================================================================
  */
 
+/* Accueil en deux colonnes : présentation à gauche, diorama à droite. */
 .home {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   align-items: center;
   min-height: calc(100vh - 2rem);
   min-height: calc(100dvh - 2rem);
   max-height: calc(100vh - 2rem);
   max-height: calc(100dvh - 2rem);
-  overflow-y: auto;
+  overflow: hidden;
   padding: clamp(1rem, 5vh, 4rem) clamp(1rem, 5.2vw, 5rem);
 }
 
+/* Contenu textuel placé au-dessus du fond visuel. */
 .intro {
   width: 100%;
   max-width: 42rem;
+  z-index: 1;
+}
+
+/* Canvas du diorama transparent pour le fondre dans la page. */
+.home :global(.home-diorama) {
+  width: 100%;
+  height: min(78vh, 34rem);
+  min-height: 18rem;
+  background: transparent;
+}
+
+/* Le canevas Three.js conserve lui aussi la transparence. */
+.home :global(.home-diorama canvas) {
+  background: transparent;
 }
 
  
+/* Titre principal en typographie pixel. */
 .hero {
   font-family: var(--font-pixel);
   font-size: clamp(1.75rem, 4.8vw, 4rem);
@@ -33,6 +51,7 @@
 }
 
 
+/* Accroche mise en avant avec la couleur d'accent du site. */
 .headline {
   margin-top: clamp(0.75rem, 2.5vh, 1.5rem);
   margin-bottom: clamp(0.75rem, 2.5vh, 1.5rem);
@@ -46,18 +65,41 @@
   text-shadow: 0 0 14px rgb(124 200 74 / 35%);
 }
 
+/* Paragraphe descriptif limité pour garder des lignes confortables. */
 .paragraph {
   max-width: min(34rem, 100%);
   color: var(--text);
   line-height: 1.8;
 }
 
+/* Espace entre le texte et le bouton principal. */
 .action {
   margin-top: clamp(1rem, 3vh, 2rem);
 }
 
 @media (max-height: 32rem) {
+  /* Évite de centrer verticalement le contenu sur les fenêtres basses. */
   .home {
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Sur téléphone, le texte et le diorama sont empilés. */
+  .home {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(12rem, 1fr);
+    align-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .intro {
+    max-width: none;
+  }
+
+  .home :global(.home-diorama) {
+    height: min(38vh, 18rem);
+    min-height: 12rem;
   }
 }

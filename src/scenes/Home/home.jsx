@@ -4,6 +4,7 @@
 
 import home from "../../content/home"
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
+import HomeDiorama from "./HomeDiorama.jsx"
 
 import style from "./Home.module.css"
 
@@ -27,7 +28,7 @@ export default function Home() {
                     />
                 </div>
             </section>
-           
+            <HomeDiorama />
         </main>
     )
 }

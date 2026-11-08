@@ -31,7 +31,12 @@ export default function About() {
                         <p className={style.paragraph}>{about.paragraph["D'ou je viens"]}</p>
                     </div>
                     <div className={style.visualStage}>
-                        <span className={style.visualLabel}>ZONE VISUELLE · 01</span>
+                        <img
+                            className={style.visualImage}
+                            src="/assets/Images/Enfant_devant_PC.jpg"
+                            alt="Enfant assis devant un ordinateur portable"
+                        />
+                        <span className={style.visualLabel}>MES DÉBUTS</span>
                     </div>
                 </article>
                 <article className={style.row}>
@@ -43,7 +48,12 @@ export default function About() {
                         <p className={style.paragraph}>{about.paragraph["Ma situation actuelle"]}</p>
                     </div>
                     <div className={style.visualStage}>
-                        <span className={style.visualLabel}>ZONE VISUELLE · 02</span>
+                        <img
+                            className={style.visualImage}
+                            src="/assets/Images/Lucas_Shooting.jpg"
+                            alt="Lucas lors d'une séance photo"
+                        />
+                        <span className={style.visualLabel}>MOI</span>
                     </div>
                 </article>
                 <article className={style.row}>
@@ -55,7 +65,12 @@ export default function About() {
                         <p className={style.paragraph}>{about.paragraph["Ce que je vise dans le futur"]}</p>
                     </div>
                     <div className={style.visualStage}>
-                        <span className={style.visualLabel}>ZONE VISUELLE · 03</span>
+                        <img
+                            className={style.visualImage}
+                            src="/assets/Images/Futur.jpg"
+                            alt="Une personne avançant dans un rayon de lumière"
+                        />
+                        <span className={style.visualLabel}>AVENIR</span>
                     </div>
                 </article>
                 <article className={style.row}>
@@ -67,7 +82,12 @@ export default function About() {
                         <p className={style.paragraph}>{about.paragraph["Mes autres passions que le code"]}</p>
                     </div>
                     <div className={style.visualStage}>
-                        <span className={style.visualLabel}>ZONE VISUELLE · 04</span>
+                        <img
+                            className={style.visualImage}
+                            src="/assets/Images/Passions.jpg"
+                            alt="Illustration de mes passions en dehors du code"
+                        />
+                        <span className={style.visualLabel}>PASSIONS</span>
                     </div>
                 </article>
             </section>

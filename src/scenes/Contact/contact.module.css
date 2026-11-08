@@ -24,6 +24,7 @@
   margin: 0 auto clamp(0.75rem, 2vh, 1.25rem);
 }
 
+/* Repères visuels réutilisés pour l'en-tête et les sous-sections. */
 .eyebrow,
 .sectionLabel {
   color: var(--accent);
@@ -36,6 +37,7 @@
   font-size: 0.68rem;
 }
 
+/* Titre et accroche de la page de contact. */
 .title {
   margin-top: 0.35rem;
   color: #e0e1dc;
@@ -55,12 +57,14 @@
   text-shadow: 0 0 14px rgb(124 200 74 / 30%);
 }
 
+/* Action de retour conservée dans l'en-tête. */
 .returnButton {
   flex: 0 0 auto;
   padding-top: 0.25rem;
 }
 
 /* Coordonnées et formulaire côte à côte */
+/* Coordonnées et formulaire présentés côte à côte. */
 .content {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -69,6 +73,7 @@
   margin: 0 auto;
 }
 
+/* Panneaux sans largeur minimale pour éviter le débordement en grille. */
 .infoPanel,
 .formPanel {
   min-width: 0;
@@ -80,6 +85,7 @@
   border-left: 1px solid rgb(207 208 204 / 10%);
 }
 
+/* Titres des deux panneaux avec icône et accent vert. */
 .infoPanel h2,
 .formPanel h2 {
   display: flex;
@@ -104,7 +110,9 @@
   text-decoration: none;
 }
 
+/* Libellés des liens et indicateur de disponibilité. */
 .contactLabel,
+/* Message de disponibilité distinct des coordonnées. */
 .availability > span {
   display: flex;
   align-items: center;
@@ -155,6 +163,7 @@
 }
 
 /* Formulaire de contact */
+/* Texte d'aide situé au-dessus des champs du formulaire. */
 .formHint {
   margin: -0.35rem 0 1rem;
   color: var(--text-dim);
@@ -162,11 +171,13 @@
   line-height: 1.5;
 }
 
+/* Champs empilés verticalement avec des espacements constants. */
 .form {
   display: grid;
   gap: 0.8rem;
 }
 
+/* Libellé et champ associés dans un petit groupe vertical. */
 .form label {
   display: grid;
   gap: 0.25rem;
@@ -176,7 +187,9 @@
   letter-spacing: 0.04em;
 }
 
+/* Apparence commune des champs texte et de la zone de message. */
 .form input,
+/* Zone de message redimensionnable en hauteur. */
 .form textarea {
   width: 100%;
   min-width: 0;
@@ -195,6 +208,7 @@
   resize: vertical;
 }
 
+/* Bouton d'envoi et retours visuels associés. */
 .submitButton {
   justify-self: start;
   display: inline-flex;
@@ -221,6 +235,7 @@
 
 /* Affichage vertical sur les écrans étroits */
 @media (max-width: 760px) {
+  /* Réduit les marges et espaces des deux colonnes sur petits écrans. */
   .contact {
     padding: 1rem;
   }
@@ -251,6 +266,7 @@
 }
 
 @media (max-width: 420px) {
+  /* Compacte les textes et les champs sur les écrans très étroits. */
   .returnButton {
     padding-top: 0;
   }

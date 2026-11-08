@@ -4,20 +4,19 @@
  */
 
 :root {
-  
-  /* Surfaces */
+  /* Couleurs des fonds, panneaux et séparateurs. */
   --bg: #0a0b0c;
   --panel-raised: #181a1c;
   --panel-sunken: #0d0e0f;
   --border: #2a2e31;
   --border-strong: #3a3f42;
 
-  /* Texte */
+  /* Niveaux de contraste pour les contenus textuels. */
   --text: #cfd0cc;
   --text-dim: #8f948f;
   --text-faint: #6b706c;
 
-  /* Accents */
+  /* Palette d'accent utilisée par les pages et les états. */
   --accent: #7cc84a;
   --accent-bright: #9be36a;
   --accent-dim: #3f6b2a;
@@ -29,7 +28,7 @@
   --purple: #a46ee0;
   --todo: #f2bd4c;
 
-  /* Typo */
+  /* Familles et tailles de texte partagées dans l'interface. */
    --font-pixel: 'VT323', 'Courier New', monospace;
   --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
   --fs-hero: clamp(3rem, 2rem + 4.2vw, 6rem);
@@ -42,7 +41,7 @@
   --tracking-mono: 0.02em;
   --tracking-pixel: 0.04em;
 
-  /* Espacements */
+  /* Échelle d'espacement commune basée sur des pas réguliers. */
    --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -52,11 +51,11 @@
   --space-7: 48px;
   --space-8: 64px;
 
-  /* Effets */
+  /* Ombres et halos réutilisables. */
   --shadow-deep: 0 18px 40px -12px rgb(0 0 0 / 85%), 0 4px 10px rgb(0 0 0 / 60%);
   --glow-accent: 0 0 12px rgb(124 200 74 / 45%);
 
-  /* Layout */
+  /* Dimensions et niveaux de superposition de l'interface. */
   --nav-tile-w: 104px;
   --tabbar-h: 68px;
   --z-shell: 10;

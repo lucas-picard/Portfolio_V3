@@ -5,12 +5,14 @@
 
 @import './tokens.css';
 
+/* Normalise le calcul des dimensions, y compris les pseudo-éléments. */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Le canvas principal occupe toute la fenêtre sans défilement du document. */
 html,
 body,
 #root {
@@ -28,6 +30,7 @@ html {
   text-size-adjust: 100%;
 }
 
+/* Réglages typographiques et couleurs de base hérités par l'application. */
 body {
   background: var(--bg);
   color: var(--text);
@@ -40,6 +43,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Supprime les marges navigateur par défaut des éléments éditoriaux. */
 h1,
 h2,
 h3,
@@ -66,6 +70,7 @@ ol {
   list-style: none;
 }
 
+/* Les liens, boutons et champs reprennent la typographie globale. */
 a {
   color: inherit;
 }
@@ -82,6 +87,7 @@ button {
   cursor: pointer;
 }
 
+/* Les médias et canevas s'adaptent à leur conteneur. */
 img,
 svg {
   display: block;
@@ -95,7 +101,7 @@ canvas {
   touch-action: none;
 }
 
-
+/* Sélection et focus clavier visibles, sans contour au clic souris. */
 ::selection {
   background: var(--accent);
   color: #0a0b0c;
@@ -130,6 +136,7 @@ canvas {
 }
 
 .sr-only {
+  /* Masque visuellement un contenu tout en le gardant accessible. */
   position: absolute !important;
   width: 1px;
   height: 1px;
@@ -142,6 +149,7 @@ canvas {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* Respecte le réglage système de réduction des animations. */
   *,
   *::before,
   *::after {

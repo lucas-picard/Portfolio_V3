@@ -54,6 +54,7 @@
   text-shadow: 0 0 14px rgb(124 200 74 / 30%);
 }
 
+/* Invite de commande décorative sous l'accroche. */
 .command {
   margin-top: 0.8rem;
   color: var(--text-faint);
@@ -77,6 +78,7 @@
   margin: 0 auto clamp(2rem, 5vh, 3.5rem);
 }
 
+/* Bloc distinct pour les activités de recherche et d'entraînement. */
 .searchSection {
   max-width: 58rem;
   margin-right: auto;
@@ -128,6 +130,7 @@
   line-height: 1.6;
 }
 
+/* Note complémentaire sous les résultats de recherche. */
 .searchMore {
   margin-top: 0.6rem;
   color: var(--text-dim);
@@ -190,6 +193,7 @@
   content: "";
 }
 
+/* Code couleur par type d'événement dans la chronologie. */
 .searchEntry {
   --entry-accent: var(--amber-ui);
 }
@@ -199,6 +203,7 @@
   --entry-accent: var(--blue);
 }
 
+/* Libellé du type d'événement et titre associé. */
 .entryType {
   display: inline-block;
   margin-right: 0.55rem;
@@ -225,12 +230,14 @@
   line-height: 1.7;
 }
 
+/* Date affichée sous le nom de l'entrée. */
 .entryDate {
   margin-top: 0.35rem;
   color: var(--text-dim);
   font-size: 0.78rem;
 }
 
+/* Détail de l'expérience ou de la formation. */
 .description {
   max-width: 64rem;
   margin-top: 0.45rem;

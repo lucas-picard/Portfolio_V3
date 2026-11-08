@@ -5,6 +5,7 @@
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import Icon from "../../components/Icon.jsx"
 import skills from "../../content/skills.js"
+import SkillModel from "./SkillModel.jsx"
 import style from "./Skills.module.css"
 
 export default function Skills() {
@@ -27,10 +28,11 @@ export default function Skills() {
                 {/* Langages de programmation et technologies web */}
                 <article className={style.card}>
                     <header className={style.cardHeader}>
-                        <span className={style.cardEyebrow}>CATÉGORIE</span>
                         <h2><Icon name="code" set="gentle" />{skills.langages.title}</h2>
                     </header>
-                    <div className={style.objectStage} aria-hidden="true" />
+                    <div className={style.objectStage}>
+                        <SkillModel file="iconCode.glb" />
+                    </div>
                     <ul className={style.skillList}>
                         <li>{skills.langages.cpp}</li>
                         <li>{skills.langages.python}</li>
@@ -46,10 +48,11 @@ export default function Skills() {
                 {/* Électronique et matériel programmable */}
                 <article className={style.card}>
                     <header className={style.cardHeader}>
-                        <span className={style.cardEyebrow}>CATÉGORIE</span>
                         <h2><Icon name="cpu" set="gentle" />{skills.hardware.title}</h2>
                     </header>
-                    <div className={style.objectStage} aria-hidden="true" />
+                    <div className={style.objectStage}>
+                        <SkillModel file="iconChip.glb" />
+                    </div>
                     <ul className={style.skillList}>
                         <li>{skills.hardware.arduino}</li>
                         <li>{skills.hardware.raspberry}</li>
@@ -62,10 +65,11 @@ export default function Skills() {
                 {/* Protocoles, adressage et équipements réseau */}
                 <article className={style.card}>
                     <header className={style.cardHeader}>
-                        <span className={style.cardEyebrow}>CATÉGORIE</span>
                         <h2><Icon name="network" set="gentle" />{skills.systemes_reseau.title}</h2>
                     </header>
-                    <div className={style.objectStage} aria-hidden="true" />
+                    <div className={style.objectStage}>
+                        <SkillModel file="iconCube.glb" />
+                    </div>
                     <ul className={style.skillList}>
                         <li>{skills.systemes_reseau.tcpip}</li>
                         <li>{skills.systemes_reseau.i2c}</li>
@@ -79,10 +83,11 @@ export default function Skills() {
                 {/* Logiciels et outils de développement */}
                 <article className={style.card}>
                     <header className={style.cardHeader}>
-                        <span className={style.cardEyebrow}>CATÉGORIE</span>
                         <h2><Icon name="terminal" set="gentle" />{skills.outils.title}</h2>
                     </header>
-                    <div className={style.objectStage} aria-hidden="true" />
+                    <div className={style.objectStage}>
+                        <SkillModel file="iconTerminal.glb" />
+                    </div>
                     <ul className={style.skillList}>
                         <li>{skills.outils.git}</li>
                         <li>{skills.outils.linux}</li>

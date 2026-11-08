@@ -40,6 +40,7 @@
   text-shadow: 0 2px 0 rgb(0 0 0 / 70%), 0 0 24px rgb(255 255 255 / 12%);
 }
 
+/* Sous-titres partagés par la sélection et la fiche détaillée. */
 .tagline,
 .detailSubtitle {
   margin-top: 0.6rem;
@@ -49,6 +50,7 @@
   letter-spacing: 0.06em;
 }
 
+/* Bouton de retour aligné dans l'en-tête de la galerie. */
 .returnButton {
   flex: 0 0 auto;
   padding-top: 0.1rem;
@@ -78,6 +80,7 @@
   transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
 }
 
+/* Mise en évidence discrète des cartes interactives. */
 .projectCard:hover {
   transform: translateY(-3px);
   border-color: rgb(124 200 74 / 45%);
@@ -97,6 +100,7 @@
   font-size: 0.75rem;
 }
 
+/* Zones de visualisation conservées volontairement vides. */
 .projectVisual,
 .detailVisual {
   position: relative;
@@ -146,6 +150,7 @@
   line-height: 1.4;
 }
 
+/* Étiquettes des technologies utilisées dans les projets. */
 .cardStack,
 .detailStack {
   display: flex;
@@ -165,6 +170,7 @@
   font-size: 0.65rem;
 }
 
+/* Styles communs aux actions de navigation des projets. */
 .openProjectButton,
 .paginationButton,
 .backToProjects {
@@ -188,6 +194,7 @@
   letter-spacing: 0.04em;
 }
 
+/* Survol et focus clavier visibles sur chaque action. */
 .openProjectButton:hover,
 .paginationButton:hover,
 .backToProjects:hover {
@@ -240,6 +247,7 @@
   margin-bottom: clamp(0.55rem, 1.5vh, 1rem);
 }
 
+/* Titre et sous-titre de la fiche du projet sélectionné. */
 .detailTitle {
   font-size: clamp(2rem, 4vw, 3.3rem);
 }
@@ -254,6 +262,7 @@
   font-size: 0.65rem;
 }
 
+/* Corps de la fiche : visualisation à gauche, informations à droite. */
 .detailLayout {
   display: grid;
   flex: 1;
@@ -263,6 +272,7 @@
   min-height: 0;
 }
 
+/* Panneau de visualisation laissé vide dans la fiche projet. */
 .detailVisual {
   height: 100%;
   min-height: 0;
@@ -270,6 +280,7 @@
   background: linear-gradient(145deg, #101212, #090a0a);
 }
 
+/* Grille compacte des informations détaillées du projet. */
 .detailContent {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -293,6 +304,7 @@
   letter-spacing: 0.05em;
 }
 
+/* Paragraphes des différentes rubriques de la fiche. */
 .detailSection > p {
   color: #bfc1bc;
   font-family: var(--font-mono);
@@ -300,6 +312,7 @@
   line-height: 1.45;
 }
 
+/* Technologies et dernière rubrique occupent toute la largeur. */
 .detailStack {
   grid-column: 1 / -1;
   margin: 0;
@@ -333,6 +346,7 @@
   background: var(--amber-ui);
 }
 
+/* Liens externes présentés sous forme de boutons adaptatifs. */
 .detailLinks {
   grid-column: 1 / -1;
   display: flex;
