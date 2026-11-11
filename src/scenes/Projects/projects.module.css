@@ -385,7 +385,7 @@
 }
 
 /* Ajustements pour tablette et téléphone */
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
   /* Sur tablette, la sélection passe à deux colonnes et la fiche à une colonne. */
   .projectGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -425,6 +425,17 @@
 
   .detailTitle {
     font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .detailPage {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
+
+  .detailContent {
+    grid-template-columns: minmax(0, 1fr);
+    overflow: visible;
   }
 
   .pagination {

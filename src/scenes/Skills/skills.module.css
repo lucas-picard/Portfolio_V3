@@ -197,7 +197,7 @@
 }
 
 /* Adaptation aux écrans étroits */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   .categoryGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

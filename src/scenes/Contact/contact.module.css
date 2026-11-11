@@ -249,8 +249,8 @@
 }
 
 /* Affichage vertical sur les écrans étroits */
-@media (max-width: 760px) {
-  /* Réduit les marges et espaces des deux colonnes sur petits écrans. */
+@media (max-width: 1024px) {
+  /* Réduit les marges et espaces des deux colonnes sur téléphone et tablette. */
   .contact {
     padding: 1rem;
   }
@@ -260,11 +260,14 @@
   }
 
   .content {
+    grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
   }
 
   .formPanel {
-    padding-left: 1rem;
+    padding: 1rem 0 0;
+    border-top: 1px solid rgb(207 208 204 / 10%);
+    border-left: 0;
   }
 
   .contactLink {
@@ -277,6 +280,11 @@
 
   .form textarea {
     min-height: 3.5rem;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 16px;
   }
 }
 
@@ -306,7 +314,6 @@
   .form input,
   .form textarea {
     padding: 0.3rem;
-    font-size: 0.62rem;
   }
 
   .form textarea {

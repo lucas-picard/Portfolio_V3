@@ -214,9 +214,9 @@ function HomeDioramaScene({ frameDocument }) {
 export default function HomeDiorama() {
     return (
         <FrameContextConsumer>
-            {({ document: frameDocument }) => (
-                <HomeDioramaScene frameDocument={frameDocument} />
-            )}
+            {({ document: frameDocument }) => {
+                return <HomeDioramaScene frameDocument={frameDocument} />
+            }}
         </FrameContextConsumer>
     )
 }

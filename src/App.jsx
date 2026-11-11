@@ -17,24 +17,32 @@ import Light2D from "./components/Light/2D_Light.jsx"
 
 // Importation du composant qui écoute les demandes de navigation
 import FrameNavigationListener from "./components/FrameNavigationListener.jsx"
+import MobileNavigation from "./Mobile/Mobile.jsx"
 
 
 
 export default function App() {
+  const isEmbedded = window.self !== window.top
+
   return (
     <MemoryRouter>
       {/* Garde la navigation de l'écran indépendante de l'URL principale. */}
       <FrameNavigationListener />
-      <Routes>
-        {/* Pages accessibles depuis les boutons de la scène 3D. */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/journey" element={<Journey />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projets" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div
+        className={isEmbedded ? "app-embedded" : "mobile-app-shell"}
+      >
+        <Routes>
+          {/* Pages accessibles depuis les boutons de la scène 3D. */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/journey" element={<Journey />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projets" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        {!isEmbedded && <MobileNavigation />}
+      </div>
 
       {/* Light pour avoir l'effet lumineux sur l'iframe */}
       <Light2D />

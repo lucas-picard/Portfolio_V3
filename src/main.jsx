@@ -4,13 +4,8 @@
 // ========================================================================
 
 // Importation des bibliothèques et des composants nécessaires
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/global.css'
 import Portfolio from './Portfolio.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Portfolio />
-  </StrictMode>,
-)
+createRoot(document.getElementById('root')).render(<Portfolio />)

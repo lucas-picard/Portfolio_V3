@@ -84,14 +84,17 @@
   }
 }
 
-@media (max-width: 700px) {
-  /* Sur téléphone, le texte et le diorama sont empilés. */
+@media (max-width: 1024px) {
+  /* Sur téléphone et tablette, le texte et le diorama sont empilés. */
   .home {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(12rem, 1fr);
     align-content: center;
     gap: 0.5rem;
     padding: 1rem;
+    min-height: 100%;
+    max-height: none;
+    overflow: visible;
   }
 
   .intro {
@@ -101,5 +104,10 @@
   .home :global(.home-diorama) {
     height: min(38vh, 18rem);
     min-height: 12rem;
+  }
+
+  .home :global(.home-diorama) {
+    height: 100%;
+    min-height: 0;
   }
 }

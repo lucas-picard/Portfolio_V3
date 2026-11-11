@@ -11,8 +11,8 @@ import { useFrame } from '@react-three/fiber'
 import { easing } from 'maath'
 
 
-const HOME = [0, -1, 28]
-const SECTION = [0, -3, 18]
+const HOME = [-1, -1, 28]
+const SECTION = [-1, -3, 18]
 const SPEED = 0.4
 
 export default function Camera() {
@@ -29,7 +29,7 @@ export default function Camera() {
       ref={cam}
       makeDefault
       position={HOME}
-      fov={40}
+      fov={38}
       near={0.1}
       far={1000}
     />

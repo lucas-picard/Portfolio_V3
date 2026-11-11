@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Perf } from 'r3f-perf'
-import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js'
+import { lazy, Suspense, useEffect, useState } from 'react'
 
-import Experience from './three/scenes/experience'
-import Light from './three/Light/Light'
-import RouteBTN from './three/scenes/RouteBTN'
-import Camera from './three/camera/Camera'
-import ScreenFrame from './three/scenes/Iframe/ScreenFrame'
-import LoadingScreen from './components/LoadingScreen.jsx'
-
-RectAreaLightUniformsLib.init()
+const DesktopPortfolio = lazy(() => import('./DesktopPortfolio.jsx'))
+const App = lazy(() => import('./App.jsx'))
 
 export default function Portfolio() {
-  const [canvasReady, setCanvasReady] = useState(false)
+  const [isMobile, setIsMobile] = useState(() =>
+    window.matchMedia('(max-width: 1024px)').matches
+  )
 
-  return (
-    <>
-      <Canvas onCreated={() => setCanvasReady(true)}>
-        <Perf position="top-left" />
+  useEffect(() => {
+    const mobileQuery = window.matchMedia('(max-width: 1024px)')
+    const updateViewport = (event) => setIsMobile(event.matches)
 
-        {/* Intégration de l'application 2D dans la scène 3D via un iframe */}
-        <Camera />
-        <Light />
-        <Experience />
-        <RouteBTN />
-        <ScreenFrame />
-      </Canvas>
-      <LoadingScreen canvasReady={canvasReady} />
-    </>
+    mobileQuery.addEventListener('change', updateViewport)
+    return () => mobileQuery.removeEventListener('change', updateViewport)
+  }, [])
+
+  return isMobile ? (
+    <Suspense fallback={null}>
+      <App />
+    </Suspense>
+  ) : (
+    <Suspense fallback={null}>
+      <DesktopPortfolio />
+    </Suspense>
   )
 }
