@@ -187,7 +187,7 @@ export default function Experience()
             />
 
             <Text3D
-                font="../../../static/font/VT323_Regular.json"
+                font="/font/VT323_Regular.json"
                 position={ [ -3.5, 7.48, 1.33 ] }
                 size={ 0.8 }
                 height={ 0.09 }
@@ -203,7 +203,7 @@ export default function Experience()
         </Text3D>
 
         <Text3D
-                font="../../../static/font/VT323_Regular.json"
+                font="/font/VT323_Regular.json"
                 position={ [ -3, 6.82, 1.33 ] }
                 size={ 0.4 }
                 height={ 0.09 }

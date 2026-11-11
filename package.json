@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
@@ -17,7 +18,8 @@
     "react-dom": "^19.2.8",
     "react-frame-component": "^5.3.2",
     "react-router-dom": "^7.18.4",
-    "three": "^0.174.0"
+    "three": "^0.174.0",
+    "vercel": "^65.14.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
