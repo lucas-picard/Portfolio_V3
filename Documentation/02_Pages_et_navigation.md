@@ -14,14 +14,7 @@
 
 ## Projets
 
-Je présente actuellement six projets sur cette page :
-
-- APP NUMWORKS ;
-- CodeWars ;
-- IA_neuronal1 ;
-- login_secure ;
-- portfolio_v3 ;
-- rubber_ducky.
+Je présente actuellement six projets sur cette page 
 
 Le nombre de cartes affichées dépend de la largeur disponible :
 
