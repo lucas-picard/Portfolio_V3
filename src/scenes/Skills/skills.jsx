@@ -6,7 +6,7 @@ import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import Icon from "../../components/Icon.jsx"
 import skills from "../../content/skills.js"
 import SkillModel from "./SkillModel.jsx"
-import style from "./Skills.module.css"
+import style from "./skills.module.css"
 
 export default function Skills() {
     return (

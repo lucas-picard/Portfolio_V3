@@ -1,3 +1,10 @@
+/*
+ * Styles de l'écran de chargement du portfolio.
+ *
+ * ========================================================================
+ */
+
+/* Superposition et panneau */
 .loadingScreen {
   position: fixed;
   z-index: 1000;
@@ -37,6 +44,7 @@
   box-shadow: 0 0 28px rgb(124 200 74 / 8%), inset 0 0 20px rgb(0 0 0 / 70%);
 }
 
+/* Décor en pixels */
 .loadingSun {
   position: absolute;
   top: 1.25rem;
@@ -82,6 +90,7 @@
   box-shadow: 0 0.35rem 0 #202e1a, 0 0.7rem 0 #141a12;
 }
 
+/* Texte et barre de progression */
 .loadingEyebrow,
 .loadingTitle,
 .loadingPercentage {
@@ -136,6 +145,7 @@
   text-align: right;
 }
 
+/* Animations et réduction des mouvements */
 @keyframes loadingVoxelBounce {
   0%, 100% {
     translate: 0 0;

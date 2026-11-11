@@ -4,7 +4,7 @@
 
 import Icon from "../../components/Icon.jsx"
 import ProjectModel from "./ProjectModel.jsx"
-import style from "./Projects.module.css"
+import style from "./projects.module.css"
 
 export default function ProjectDetail({ project, model, onBack }) {
     return (

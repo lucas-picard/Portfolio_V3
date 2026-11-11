@@ -1,8 +1,16 @@
+/*
+ * Styles de la navigation mobile et de la zone de contenu.
+ *
+ * ========================================================================
+ */
+
+/* Mise en page sur petit écran */
 .mobile-bottom-nav {
   display: none;
 }
 
 @media (max-width: 1024px) {
+  /* Zone de contenu au-dessus de la navigation */
   .mobile-app-shell > main {
     position: fixed;
     inset: 0 0 calc(66px + env(safe-area-inset-bottom));
@@ -49,6 +57,7 @@
     white-space: nowrap;
   }
 
+  /* État actif et focus de la navigation */
   .mobile-bottom-nav-item::before {
     position: absolute;
     top: -6px;

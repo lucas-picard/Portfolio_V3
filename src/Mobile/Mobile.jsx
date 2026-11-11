@@ -1,7 +1,13 @@
+// Fichier qui affiche la navigation principale sur mobile
+//
+// ========================================================================
+
+// Importation des composants nécessaires
 import { Link, useLocation } from "react-router-dom"
 import Icon from "../components/Icon.jsx"
 import "./Mobile.css"
 
+// Liens affichés dans la navigation mobile
 const items = [
   { path: "/about", label: "À propos", icon: "user" },
   { path: "/projets", label: "Projets", icon: "code" },
@@ -10,6 +16,7 @@ const items = [
   { path: "/contact", label: "Contact", icon: "mail" },
 ]
 
+// Affichage de la navigation et de la page active
 export default function MobileNavigation() {
   const { pathname } = useLocation()
   const activePath = pathname.startsWith("/projets/") ? "/projets" : pathname

@@ -1,20 +1,27 @@
+// Fichier qui affiche la progression du chargement de la scène 3D
+//
+// ========================================================================
+
+// Importation des bibliothèques et des styles
 import { useEffect, useState } from 'react'
 import { useProgress } from '@react-three/drei'
 import './LoadingScreen.css'
 
+// Gestion de l'état de chargement
 export default function LoadingScreen({ canvasReady }) {
   const { active, loaded, progress, total } = useProgress()
   const hasStartedLoading = total > 0 || loaded > 0
+  const isLoadingComplete = canvasReady && hasStartedLoading && !active
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    if (!canvasReady || !hasStartedLoading || active) {
+    if (!isLoadingComplete) {
       return
     }
 
     const timeout = window.setTimeout(() => setIsVisible(false), 450)
     return () => window.clearTimeout(timeout)
-  }, [active, canvasReady, hasStartedLoading])
+  }, [isLoadingComplete])
 
   if (!isVisible) {
     return null
@@ -22,9 +29,10 @@ export default function LoadingScreen({ canvasReady }) {
 
   const percentage = Math.round(progress)
 
+  // Affichage de l'écran et de sa progression
   return (
     <div
-      className={`loadingScreen${canvasReady && hasStartedLoading && !active ? ' loadingScreen--complete' : ''}`}
+      className={`loadingScreen${isLoadingComplete ? ' loadingScreen--complete' : ''}`}
       role="status"
       aria-live="polite"
       aria-label={`Chargement du portfolio : ${percentage}%`}

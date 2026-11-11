@@ -5,7 +5,7 @@
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import Icon from "../../components/Icon.jsx"
 import about from "../../content/about.js"
-import style from "./About.module.css"
+import style from "./about.module.css"
 
 export default function About() {
     return (

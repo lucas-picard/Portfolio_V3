@@ -1,4 +1,10 @@
-/* Dimensions natives du contenu affiché dans l'écran 3D. */
+/*
+ * Dimensions natives de la page affichée dans l'écran 3D.
+ *
+ * ========================================================================
+ */
+
+/* Contenu de l'iframe */
 .htmlScreen iframe {
   width: 1080px;
   height: 660px;

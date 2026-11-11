@@ -1,4 +1,10 @@
-/* Halo blanc en haut de l'iframe ; ne bloque pas les interactions. */
+/*
+ * Halo lumineux décoratif de l'iframe, sans bloquer les interactions.
+ *
+ * ========================================================================
+ */
+
+/* Halo supérieur */
 .light {
   position: fixed;
   inset: 0 0 auto;

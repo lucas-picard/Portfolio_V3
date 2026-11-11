@@ -8,7 +8,7 @@ import Icon from "../../components/Icon.jsx"
 import projects from "../../content/project.js"
 import ProjectDetail from "./ProjectDetail.jsx"
 import ProjectModel from "./ProjectModel.jsx"
-import style from "./Projects.module.css"
+import style from "./projects.module.css"
 
 // Les contenus viennent de project.js ; cette liste ajoute une catégorie d'affichage.
 const projectList = [

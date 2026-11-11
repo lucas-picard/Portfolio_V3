@@ -6,18 +6,18 @@
 import { MemoryRouter, Routes, Route } from "react-router-dom"
 
 // Importation des différentes scènes de l'application
-import Home from "./scenes/Home/Home.jsx"
-import About from "./scenes/About/About.jsx"
-import Journey from "./scenes/Journey/Journey.jsx"
-import Skills from "./scenes/Skills/Skills.jsx"
-import Projects from "./scenes/Projects/Projects.jsx"
-import Contact from "./scenes/Contact/contact.jsx"
-import NotFound from "./scenes/NotFound/NotFound.jsx"
-import Light2D from "./components/Light/2D_Light.jsx"
+import Home from "../scenes/Home/home.jsx"
+import About from "../scenes/About/about.jsx"
+import Journey from "../scenes/Journey/journey.jsx"
+import Skills from "../scenes/Skills/skills.jsx"
+import Projects from "../scenes/Projects/projects.jsx"
+import Contact from "../scenes/Contact/contact.jsx"
+import NotFound from "../scenes/NotFound/notFound.jsx"
+import Light2D from "../components/Light/2D_Light.jsx"
 
 // Importation du composant qui écoute les demandes de navigation
-import FrameNavigationListener from "./components/FrameNavigationListener.jsx"
-import MobileNavigation from "./Mobile/Mobile.jsx"
+import FrameNavigationListener from "../components/FrameNavigationListener.jsx"
+import MobileNavigation from "../Mobile/Mobile.jsx"
 
 
 

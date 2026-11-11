@@ -89,10 +89,10 @@
   .home {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(12rem, 1fr);
-    align-content: center;
-    gap: 0.5rem;
+    align-content: stretch;
+    gap: 0.25rem;
     padding: 1rem;
-    min-height: 100%;
+    min-height: 0;
     max-height: none;
     overflow: visible;
   }
@@ -109,5 +109,41 @@
   .home :global(.home-diorama) {
     height: 100%;
     min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .home {
+    grid-template-rows: auto minmax(13rem, 1fr);
+    gap: 0.35rem;
+    padding: 1.1rem 1rem 0.5rem;
+  }
+
+  .hero {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    line-height: 0.95;
+  }
+
+  .headline {
+    margin: 0.65rem 0;
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+
+  .paragraph {
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+
+  .action {
+    margin-top: 0.85rem;
+  }
+
+  .home :global(.home-diorama) {
+    min-height: 13rem;
+    border: 1px solid rgb(207 208 204 / 10%);
+    background:
+      radial-gradient(ellipse at 50% 62%, rgb(124 200 74 / 8%), transparent 62%),
+      linear-gradient(145deg, rgb(255 255 255 / 2%), transparent 65%);
   }
 }

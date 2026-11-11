@@ -5,7 +5,7 @@
 import BtnRetour from "../../components/btnRetour/btnRetour.jsx"
 import Icon from "../../components/Icon.jsx"
 import journey from "../../content/journey.js"
-import style from "./Journey.module.css"
+import style from "./journey.module.css"
 
 export default function Journey() {
     return (
