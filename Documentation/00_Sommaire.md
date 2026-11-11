@@ -1,5 +1,15 @@
 # Documentation du portfolio
 
+> **IMPORTANT — LICENCE OBLIGATOIRE**
+>
+> La lecture de la licence (`LICENSE.txt`) est impérative avant toute utilisation, consultation du code à des fins de réutilisation, modification ou exploitation de ce projet.
+>
+> Toute personne souhaitant utiliser ce projet doit prendre connaissance de l'intégralité des conditions définies dans la licence et s'engager à les respecter.
+>
+> Toute publication, mise en ligne, hébergement ou redistribution du projet, dans sa forme originale ou modifiée, nécessite l'autorisation écrite préalable de Lucas Picard.
+>
+> L'utilisation de ce projet implique l'acceptation des conditions de sa licence.
+
 Cette documentation présente le site de Lucas Picard, son fonctionnement et son organisation. Les fichiers sont séparés par thème pour retrouver rapidement une information.
 
 ## Lire la documentation
