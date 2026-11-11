@@ -1,31 +1,31 @@
-# Présentation du site
+# Présentation de mon site
 
-## Objectif
+## Mon objectif
 
-Ce site présente le profil, les compétences, le parcours et les projets de Lucas Picard. Il réunit deux expériences dans la même application :
+J’ai créé ce site pour présenter mon profil, mes compétences, mon parcours et mes projets. J’y réunis deux expériences dans la même application :
 
-- **Sur ordinateur :** une scène 3D interactive qui intègre le portfolio 2D dans un écran.
-- **Sur mobile et petit écran :** une version 2D adaptée à la navigation tactile.
+- **Sur ordinateur :** je propose une scène 3D interactive qui intègre mon portfolio 2D dans un écran.
+- **Sur mobile et petit écran :** je propose une version 2D adaptée à la navigation tactile.
 
-Le projet utilise React pour l’interface, Vite pour le développement et la compilation, et Three.js avec React Three Fiber pour le rendu 3D.
+J’utilise React pour l’interface, Vite pour le développement et la compilation, et Three.js avec React Three Fiber pour le rendu 3D.
 
-## Deux versions selon l’écran
+## Mes deux versions selon l’écran
 
-Le composant `src/Portfolio.jsx` choisit la présentation selon la largeur de la fenêtre :
+Dans `src/Portfolio.jsx`, je choisis la présentation selon la largeur de la fenêtre :
 
-- à **1024 px ou moins**, le site charge l’application 2D et sa navigation mobile ;
-- au-dessus de **1024 px**, le site charge la scène 3D.
+- à **1024 px ou moins**, je charge mon application 2D et sa navigation mobile ;
+- au-dessus de **1024 px**, je charge ma scène 3D.
 
-Les deux versions sont chargées à la demande. Sur ordinateur, la page 2D est affichée dans un iframe placé sur un panneau du décor. Sur mobile, l’application 2D occupe directement l’écran.
+Je charge chaque version uniquement lorsqu’elle est nécessaire. Sur ordinateur, j’affiche ma page 2D dans un iframe placé sur un panneau du décor. Sur mobile, mon application 2D occupe directement l’écran.
 
-## Sur ordinateur
+## Mon expérience sur ordinateur
 
-La scène représente un espace de portfolio composé d’un panneau, de modèles décoratifs, de lumières et de boutons de navigation. Les boutons réagissent au survol et déplacent l’indicateur de section sélectionnée.
+J’ai composé ma scène d’un panneau, de modèles décoratifs, de lumières et de boutons de navigation. Mes boutons réagissent au survol et déplacent l’indicateur de la section sélectionnée.
 
-L’interface 2D reste le contenu du site : elle est affichée dans l’écran 3D et conserve ses propres pages. Un écran de chargement indique la progression des ressources 3D.
+Je conserve mon interface 2D comme contenu du site : je l’affiche dans l’écran 3D et elle garde ses propres pages. J’affiche un écran de chargement pendant la préparation de mes ressources 3D.
 
-## Sur mobile
+## Mon expérience sur mobile
 
-La scène Three.js principale n’est pas chargée. Une barre fixe au bas de l’écran permet d’ouvrir les pages À propos, Projets, Compétences, Parcours et Contact. La page d’accueil est accessible depuis le bouton d’entrée et les boutons de retour des pages.
+Je ne charge pas ma scène Three.js principale sur mobile. J’affiche une barre fixe au bas de l’écran pour ouvrir mes pages À propos, Projets, Compétences, Parcours et Contact. Je permets d’accéder à l’accueil avec mon bouton d’entrée et les boutons de retour des pages.
 
-Pour le détail des pages et de leurs interactions, voir [Pages et navigation](./02_Pages_et_navigation.md).
+Je détaille mes pages et leurs interactions dans [Pages et navigation](./02_Pages_et_navigation.md).

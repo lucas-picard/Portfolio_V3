@@ -1,20 +1,20 @@
-# Pages et navigation
+# Mes pages et ma navigation
 
-## Pages disponibles
+## Mes pages
 
-| Page | Adresse interne | Contenu |
+| Page | Adresse interne | Ce que j’y présente |
 |---|---|---|
-| Accueil | `/` | Présentation courte et diorama 3D. Le bouton d’entrée ouvre À propos. |
-| À propos | `/about` | Les débuts, la formation, les objectifs et les passions, accompagnés d’images. |
-| Projets | `/projets` | Cartes de projets, pagination et fiches détaillées. |
-| Compétences | `/skills` | Langages, matériel, systèmes et réseaux, outils et qualités personnelles. |
-| Parcours | `/journey` | Recherche de stage, formations, stages et emplois. |
-| Contact | `/contact` | Coordonnées, liens, téléchargement du CV et formulaire. |
-| Page inconnue | Toute autre adresse | Affiche une page 404. |
+| Accueil | `/` | Je me présente brièvement avec un diorama 3D. Mon bouton d’entrée mène à ma page À propos. |
+| À propos | `/about` | Je raconte mes débuts, ma formation, mes objectifs et mes passions avec des images. |
+| Projets | `/projets` | Je présente mes projets dans des cartes et des fiches détaillées. |
+| Compétences | `/skills` | Je présente mes langages, mon matériel, mes compétences en systèmes et réseaux, mes outils et mes qualités. |
+| Parcours | `/journey` | Je présente ma recherche de stage, mes formations, mes stages et mes emplois. |
+| Contact | `/contact` | Je partage mes coordonnées et mes liens, mon CV à télécharger et un formulaire. |
+| Page inconnue | Toute autre adresse | J’affiche une page 404. |
 
-## Projets
+## Mes projets
 
-La liste contient actuellement six projets :
+Je présente actuellement six projets :
 
 - APP NUMWORKS ;
 - CodeWars ;
@@ -23,7 +23,7 @@ La liste contient actuellement six projets :
 - portfolio_v3 ;
 - rubber_ducky.
 
-Le nombre de cartes affichées dépend de la largeur disponible :
+J’adapte le nombre de cartes affichées à la largeur disponible :
 
 | Largeur | Cartes par page |
 |---|---:|
@@ -31,21 +31,21 @@ Le nombre de cartes affichées dépend de la largeur disponible :
 | De 561 à 850 px | 2 |
 | Plus de 850 px | 3 |
 
-Les boutons précédent et suivant parcourent les pages en boucle. L’ouverture d’une carte remplace la liste par une fiche détaillée. Selon le projet, cette fiche présente son contexte, sa réalisation, ses défis, ses technologies, son état et des liens externes. Le bouton « Projets » de la navigation mobile reste actif lorsqu’une fiche est ouverte.
+J’ai fait en sorte que mes boutons précédent et suivant parcourent les pages en boucle. Quand un visiteur ouvre une carte, je remplace la liste par une fiche détaillée. Selon le projet, j’y présente son contexte, sa réalisation, ses défis, ses technologies, son état et des liens externes. Sur mobile, je garde l’entrée « Projets » active lorsqu’une fiche est ouverte.
 
-## Contact
+## Me contacter
 
-La page permet d’ouvrir un nouveau message électronique et de consulter les profils en ligne. Le bouton de téléchargement fournit `static/assets/CV.pdf`.
+Je permets aux visiteurs de m’écrire par e-mail, de consulter mes profils en ligne et de télécharger mon CV depuis `static/assets/CV.pdf`.
 
-Le formulaire demande un nom, une adresse e-mail et un message. Son envoi utilise le service Web3Forms et affiche l’état de l’envoi ou une erreur.
+Mon formulaire demande un nom, une adresse e-mail et un message. J’utilise Web3Forms pour l’envoi et j’affiche le résultat ou l’erreur éventuelle.
 
-## Navigation entre la 3D et la page intégrée
+## Ma navigation entre la 3D et la page intégrée
 
-L’application utilise un `MemoryRouter` : les pages sont parcourues dans l’application sans navigation classique du navigateur.
+J’utilise un `MemoryRouter` pour parcourir mes pages dans l’application sans navigation classique du navigateur.
 
-1. Un bouton 3D met à jour la section sélectionnée dans `src/store/useSectionStore.jsx`.
-2. Il envoie un événement `portfolio:navigate` contenant l’adresse de la page.
-3. `src/components/FrameNavigationListener.jsx` reçoit l’événement et demande au routeur d’afficher la page correspondante.
-4. Les boutons de retour des pages mettent à jour la section sélectionnée et ramènent à l’accueil.
+1. Quand un visiteur sélectionne un bouton 3D, je mets à jour la section dans `src/store/useSectionStore.jsx`.
+2. J’envoie l’événement `portfolio:navigate` avec l’adresse de la page.
+3. `src/components/FrameNavigationListener.jsx` reçoit mon événement et demande au routeur d’afficher la page correspondante.
+4. Mes boutons de retour mettent à jour la section sélectionnée et ramènent à l’accueil.
 
-Ce mécanisme maintient la navigation 2D synchronisée avec les boutons du décor 3D.
+Grâce à ce mécanisme, je synchronise ma navigation 2D avec les boutons du décor 3D.
