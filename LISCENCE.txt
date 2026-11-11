@@ -1,0 +1,43 @@
+Copyright (c) 2026 Lucas Picard
+
+Any person obtaining a copy of this software and its associated documentation files 
+(the "Software") is hereby permitted to use, copy, modify, adapt, and make use of the 
+Software for personal or commercial purposes, subject to the following conditions:
+
+The following conditions apply to any publication or redistribution of the Software, in whole or in part:
+
+  - Any publication, online deployment, hosting, or redistribution of the Software, in its original 
+    or modified form, requires the prior written permission of Lucas Picard.
+  - Anyone authorized to publish or redistribute the Software must include 
+    a complete copy of this license in their project or source code.
+  - The original copyright notice (Copyright (c) 2026 Lucas Picard) must be retained.
+
+No permission to publish or redistribute the Software is automatically granted under this license.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT 
+SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY 
+ARISING FROM THE USE OF THE SOFTWARE.
+
+All rights not expressly granted under this license are reserved by Lucas Picard.
+
+Author Signature:
+
+      ,-.
+     / \  `.  __..-,O
+    :   \ --''_..-'.'
+    |    . .-' `. '.
+    :     .     .`.'
+     \     `.  /  ..
+      \      `.   ' .
+       `,       `.   \
+      ,|,`.        `-.\
+     '.||  ``-...__..-`
+      |  |
+      |__|
+      /||\
+     //||\\
+    // || \\
+ __//__||__\\__
+'--------------' 
+
+ 010011001101111011011110111001101101011 
+0110000101110011    
