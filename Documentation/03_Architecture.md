@@ -8,7 +8,6 @@ Portfolio_V3/
 ├── src/
 │   ├── APP/
 │   │   ├── App.jsx             # Routeur et assemblage des pages 2D
-│   │   ├── AppArcade.jsx       # Écran d’arcade non intégré à la navigation
 │   │   └── DesktopPortfolio.jsx # Assemblage de la scène 3D sur ordinateur
 │   ├── components/             # Composants communs
 │   ├── content/                # Textes et données des pages
