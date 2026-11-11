@@ -9,23 +9,23 @@ J’ai créé ce site pour présenter mon profil, mes compétences, mon parcours
 
 J’utilise React pour l’interface, Vite pour le développement et la compilation, et Three.js avec React Three Fiber pour le rendu 3D.
 
-## Mes deux versions selon l’écran
+## Deux versions selon l’écran
 
-Dans `src/Portfolio.jsx`, je choisis la présentation selon la largeur de la fenêtre :
+Dans `src/Portfolio.jsx`, la présentation est choisie selon la largeur de la fenêtre :
 
-- à **1024 px ou moins**, je charge mon application 2D et sa navigation mobile ;
-- au-dessus de **1024 px**, je charge ma scène 3D.
+- à **1024 px ou moins**, l’application 2D et la navigation mobile sont chargées ;
+- au-dessus de **1024 px**, la scène 3D est chargée.
 
-Je charge chaque version uniquement lorsqu’elle est nécessaire. Sur ordinateur, j’affiche ma page 2D dans un iframe placé sur un panneau du décor. Sur mobile, mon application 2D occupe directement l’écran.
+Chaque version est chargée uniquement lorsqu’elle est nécessaire. Sur ordinateur, la page 2D s’affiche dans un iframe placé sur un panneau du décor. Sur mobile, l’application 2D occupe directement l’écran.
 
-## Mon expérience sur ordinateur
+## Expérience sur ordinateur
 
-J’ai composé ma scène d’un panneau, de modèles décoratifs, de lumières et de boutons de navigation. Mes boutons réagissent au survol et déplacent l’indicateur de la section sélectionnée.
+J’ai composé ma scène 3D d’un panneau, de modèles décoratifs, de lumières et de boutons de navigation. Ces boutons réagissent au survol et déplacent l’indicateur de la section sélectionnée.
 
-Je conserve mon interface 2D comme contenu du site : je l’affiche dans l’écran 3D et elle garde ses propres pages. J’affiche un écran de chargement pendant la préparation de mes ressources 3D.
+L’interface 2D reste le contenu du site : elle s’affiche dans l’écran 3D et conserve ses propres pages. Un écran de chargement indique la progression des ressources 3D.
 
-## Mon expérience sur mobile
+## Expérience sur mobile
 
-Je ne charge pas ma scène Three.js principale sur mobile. J’affiche une barre fixe au bas de l’écran pour ouvrir mes pages À propos, Projets, Compétences, Parcours et Contact. Je permets d’accéder à l’accueil avec mon bouton d’entrée et les boutons de retour des pages.
+La scène Three.js principale n’est pas chargée sur mobile. Une barre fixe au bas de l’écran permet d’ouvrir les pages À propos, Projets, Compétences, Parcours et Contact. L’accueil est accessible depuis le bouton d’entrée et les boutons de retour des pages.
 
-Je détaille mes pages et leurs interactions dans [Pages et navigation](./02_Pages_et_navigation.md).
+Le détail des pages et de leurs interactions est présenté dans [Pages et navigation](./02_Pages_et_navigation.md).

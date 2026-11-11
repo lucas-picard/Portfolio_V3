@@ -10,18 +10,18 @@
 >
 > L’utilisation de ce projet implique l’acceptation des conditions de ma licence.
 
-Je présente ici mon site, son fonctionnement et son organisation. J’ai séparé les documents par thème pour retrouver rapidement les informations.
+Cette documentation présente mon site, son fonctionnement et son organisation. Les fichiers sont séparés par thème pour retrouver rapidement les informations.
 
 ## Lire la documentation
 
-1. [Présentation de mon site](./01_Presentation.md) — mon objectif et mes deux versions.
-2. [Pages et navigation](./02_Pages_et_navigation.md) — le contenu de mes pages et leurs interactions.
+1. [Présentation de mon site](./01_Presentation.md) — son objectif et ses deux versions.
+2. [Pages et navigation](./02_Pages_et_navigation.md) — le contenu des pages et leurs interactions.
 3. [Architecture de mon projet](./03_Architecture.md) — l’organisation et le fonctionnement du code.
-4. [Contenus et ressources](./04_Contenus_et_ressources.md) — où je modifie les textes, images, icônes et modèles.
-5. [Développement et commandes](./05_Developpement.md) — comment je lance, vérifie et construis le site.
+4. [Contenus et ressources](./04_Contenus_et_ressources.md) — où se trouvent les textes, images, icônes et modèles.
+5. [Développement et commandes](./05_Developpement.md) — installation, commandes et déploiement.
 
 ## Mon projet
 
-J’ai développé mon portfolio avec React et Vite. Je propose une interface 2D et, sur ordinateur, un décor 3D interactif construit avec Three.js et React Three Fiber.
+J’ai développé mon portfolio avec React et Vite. Il propose une interface 2D et, sur ordinateur, un décor 3D interactif construit avec Three.js et React Three Fiber.
 
-Je n’ai pas encore intégré l’arcade ni la page de crédits à la navigation. Je détaille ces éléments dans [l’architecture de mon projet](./03_Architecture.md).
+L’arcade et la page de crédits ne sont pas encore intégrées à la navigation. Ces éléments sont détaillés dans [l’architecture de mon projet](./03_Architecture.md).

@@ -1,46 +1,46 @@
 # Mes contenus et mes ressources
 
-## Où je modifie mes textes
+## Où modifier les textes
 
-Je regroupe les données affichées par mes pages dans `src/content/` :
+Les données affichées par les pages se trouvent dans `src/content/` :
 
-| Fichier | Ce que j’y modifie |
+| Fichier | Contenu |
 |---|---|
-| `home.js` | Je modifie le titre, l’accroche et le texte de mon accueil. |
-| `about.js` | Je modifie les textes de ma présentation. |
-| `project.js` | Je modifie les descriptions et les informations de mes projets. |
-| `skills.js` | Je modifie mes compétences techniques et personnelles. |
-| `journey.js` | Je modifie mes formations, stages, emplois et ma recherche actuelle. |
-| `contact.js` | Je modifie mes coordonnées affichées et les libellés de mon formulaire. |
-| `lien.js` | Je modifie les liens vers mes profils et mes projets. |
-| `notFound.js` | Je modifie les données de ma page 404. |
+| `home.js` | Titre, accroche et texte de l’accueil. |
+| `about.js` | Textes de ma présentation. |
+| `project.js` | Descriptions et informations de mes projets. |
+| `skills.js` | Mes compétences techniques et personnelles. |
+| `journey.js` | Mes formations, stages, emplois et recherche actuelle. |
+| `contact.js` | Mes coordonnées affichées et libellés du formulaire. |
+| `lien.js` | Liens vers mes profils et mes projets. |
+| `notFound.js` | Données de la page 404. |
 
-Je conserve mes brouillons au format Markdown dans `src/content/Brouillon_txt/`. Mes pages utilisent toutefois les données JavaScript, et non ces brouillons.
+Les fichiers de `src/content/Brouillon_txt/` sont des brouillons au format Markdown. Les pages utilisent les données JavaScript, et non ces brouillons.
 
-Pour modifier la mise en page ou le comportement d’une page, je travaille dans son composant sous `src/scenes/`. Pour son apparence, je modifie le fichier CSS Module associé.
+Pour modifier la mise en page ou le comportement d’une page, consultez son composant sous `src/scenes/`. Son apparence est définie dans le fichier CSS Module associé.
 
-## Mes images et mes icônes
+## Images et icônes
 
-- Je range les images de mes pages dans `static/assets/Images/`.
-- Je range mes icônes SVG dans `static/assets/Logos/`.
-- Je fournis mon CV à télécharger dans `static/assets/CV.pdf`.
+- Les images des pages se trouvent dans `static/assets/Images/`.
+- Les icônes SVG se trouvent dans `static/assets/Logos/`.
+- Le CV téléchargeable se trouve dans `static/assets/CV.pdf`.
 
-Avec `src/components/Icon.jsx`, je construis le chemin d’une icône à partir de son nom et de sa collection.
+`src/components/Icon.jsx` construit le chemin d’une icône à partir de son nom et de sa collection.
 
-## Mes modèles 3D
+## Modèles 3D
 
-- Je range mes modèles décoratifs dans `static/models/Decors/`.
-- Je place notamment mon panneau, mon enseigne et mes boutons 3D dans `static/models/Fonctionnel/`.
-- Je range mon diorama d’accueil et les modèles de mes projets et catégories de compétences dans `static/models/Iframe/`.
-- J’utilise `static/font/VT323_Regular.json` pour le texte 3D.
+- `static/models/Decors/` contient les modèles décoratifs.
+- `static/models/Fonctionnel/` contient notamment le panneau, l’enseigne et les boutons 3D.
+- `static/models/Iframe/` contient le diorama d’accueil ainsi que les modèles des projets et des catégories de compétences.
+- `static/font/VT323_Regular.json` fournit la police utilisée pour le texte 3D.
 
-Je charge mes modèles avec `src/components/Import.jsx` ou avec les composants de modèle de mes pages. Dans le code, j’utilise l’URL publique de Vite, par exemple `/models/Fonctionnel/arcade.glb`.
+Les modèles sont chargés par `src/components/Import.jsx` ou par les composants de modèle propres aux pages. Le code utilise leur URL publique Vite, par exemple `/models/Fonctionnel/arcade.glb`.
 
-## Mes styles partagés
+## Styles partagés
 
-- Dans `src/styles/global.css`, je définis mes styles globaux.
-- Dans `src/styles/tokens.css`, je regroupe mes couleurs, ma typographie, mes espacements et mes variables communes.
-- Dans `src/styles/App.module.css`, je définis les styles de mon application.
-- À côté de mes pages, j’utilise des fichiers `.module.css` pour leurs styles propres.
+- `src/styles/global.css` définit les styles globaux.
+- `src/styles/tokens.css` regroupe les couleurs, la typographie, les espacements et les variables communes.
+- `src/styles/App.module.css` contient les styles de l’application.
+- Les fichiers `.module.css` placés à côté des pages définissent les styles propres à ces pages.
 
-Je conserve les licences des ressources tierces dans `static/Liscences/`.
+Les licences des ressources tierces se trouvent dans `static/Liscences/`.
